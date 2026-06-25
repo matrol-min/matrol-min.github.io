@@ -1,0 +1,19 @@
+# =====================================================================
+#  특허 데이터 — 항목 추가 시 카운트/목록 자동 갱신.
+#  status: registered(등록) / pending(출원)
+# =====================================================================
+- year: 2024
+  status: registered
+  title_ko: "특허 명칭을 여기에"
+  title_en: "Patent title here"
+  number: "10-1234567"
+  inventors_ko: "홍길동, 김OO"
+  inventors_en: "G. Hong, O. Kim"
+
+- year: 2023
+  status: pending
+  title_ko: "출원 중인 특허 명칭"
+  title_en: "Pending patent title"
+  number: "10-2023-0012345"
+  inventors_ko: "홍길동"
+  inventors_en: "G. Hong"
