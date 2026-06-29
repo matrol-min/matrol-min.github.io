@@ -1,0 +1,122 @@
+---
+# Front matter comment to ensure Jekyll properly reads file.
+---
+
+/* 한글 웹폰트(나눔고딕) — 모든 OS에서 동일하게 보이도록 */
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
+
+@import 'modern-resume-theme';
+
+/* ===== 폰트 통일 =====
+   영문은 기존 테마 폰트(Helvetica Neue/Roboto)를 그대로 쓰되,
+   한글 글리프는 나눔고딕으로 렌더링되도록 폰트 패밀리 끝에 추가.
+   본문/제목/버튼 등 전부 동일 패밀리로 강제. */
+$cv-font: "Helvetica Neue", "Helvetica", "Roboto", "Nanum Gothic", "Arial", sans-serif;
+
+body,
+h1, h2, h3, h4, h5, h6,
+p, li, a, span, div, td, th,
+.intro-container, .container,
+button, input {
+  font-family: $cv-font !important;
+}
+
+/* ===== 언어 전환 버튼 ===== */
+.lang-switch {
+  text-align: right;
+  padding-top: 14px;
+  margin-bottom: -8px;
+}
+.lang-btn {
+  display: inline-block;
+  padding: 3px 12px;
+  margin-left: 4px;
+  font-size: 0.85em;
+  font-weight: 600;
+  border: 1px solid #ccc;
+  border-radius: 14px;
+  color: #555 !important;
+  text-decoration: none !important;
+}
+.lang-btn:hover { background: #f2f2f2; }
+.lang-btn.active {
+  background: #477dca;
+  border-color: #477dca;
+  color: #fff !important;
+}
+
+/* ===== 논문/특허 배지 ===== */
+.cv-badge {
+  display: inline-block;
+  font-size: 0.78em;
+  font-weight: 600;
+  padding: 1px 8px;
+  border-radius: 10px;
+  vertical-align: middle;
+  white-space: nowrap;
+  margin-left: 4px;
+}
+.cv-badge-accent { background: #e0ecff; color: #1d4ed8; }
+.cv-badge-muted  { background: #eee;    color: #666; }
+
+/* ===== 논문/특허: 1컬럼 레이아웃 =====
+   기본 list 레이아웃은 .details(좌, col-sm-4) / .content(우, col-sm-8) 2단인데,
+   제목이 길면 깨지므로 publications/patents 섹션은 1단으로.
+   제목 → 다음 줄에 저자·서지정보 순으로 세로 배치. */
+.cv-onecol .row.layout > .details.col-sm-4,
+.cv-onecol .row.layout > .content.col-sm-8,
+.cv-onecol .row.layout > div[class*="col-"] {
+  width: 100% !important;
+  max-width: 100% !important;
+  float: none !important;
+  display: block !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  text-align: left !important;
+  clear: both;
+}
+.cv-onecol .row.layout {
+  margin-bottom: 1.1em;
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid #f0f0f0;
+  display: block;
+}
+.cv-onecol .details h4 {
+  margin-bottom: 4px;
+  line-height: 1.35;
+}
+.cv-onecol .content { margin-top: 0; }
+.cv-onecol .content p { margin-bottom: 0; line-height: 1.5; }
+/* 서지정보는 약간 작고 차분하게 */
+.cv-onecol .content p { font-size: 0.95em; color: #444; }
+
+/* ===== Publication Summary 표를 일반 섹션처럼 ===== */
+.cv-summary table {
+  border-collapse: collapse;
+  margin: 0;
+  width: auto;
+  font-size: 1rem;        /* 다른 섹션 본문과 동일 크기 */
+  text-align: left;
+}
+.cv-summary table th { display: none; }
+.cv-summary table td {
+  border: none;
+  padding: 3px 28px 3px 0;
+  text-align: left;       /* 가운데 정렬 → 왼쪽 정렬 */
+  vertical-align: top;
+}
+.cv-summary table td:last-child {
+  font-weight: 700;
+  color: #477dca;
+}
+
+/* ===== 인쇄(PDF) 전용 ===== */
+@media print {
+  .lang-switch { display: none !important; }
+  body { font-size: 11pt; }
+  .resume-item, li, tr { page-break-inside: avoid; }
+  h1, h2, h3 { page-break-after: avoid; }
+  a { color: #1a1a1a !important; text-decoration: none !important; }
+  .cv-badge { background: none !important; border: 1px solid #999; color: #333 !important; }
+  @page { margin: 14mm 14mm; }
+}

@@ -1,0 +1,20 @@
+# Site-wide settings (디자인/빌드 관련)
+repository: yourname/yourname.github.io
+favicon: assets/favicon.ico
+
+# 콘텐츠 버전 (테마 v2)
+version: 2
+
+# 다크모드 (true/false/never)
+darkmode: false
+
+# Build settings
+sass:
+  sass_dir: _sass
+  style: compressed
+
+plugins:
+ - jekyll-seo-tag
+
+# 인적사항/섹션 내용은 site가 아니라 각 페이지(index.html, en.html)의
+# front matter 에서 읽습니다. 여기서는 사이트 전역 설정만 둡니다.

@@ -1,0 +1,789 @@
+# =====================================================================
+#  특허 데이터 — CV에 적힌 언어 그대로. 항목 추가 시 카운트/목록 자동 갱신.
+#  status: registered(등록번호 있음) / pending(출원만)
+#  CV 표기 언어를 그대로 사용 (국문 특허=국문, International=영문).
+#  title_ko/title_en, inventors_ko/inventors_en 에 동일 값을 넣어 KO/EN 페이지에 같게 표시.
+# =====================================================================
+- year: 2010
+  status: pending
+  title_ko: "전기장 보조 로보틱 노즐 프린터 및 이를 이용한 유기 나노 패턴의 제조 방법 {Electric field aided robotic nozzle printer and method for fabrication of organic nano sturcture}"
+  title_en: "전기장 보조 로보틱 노즐 프린터 및 이를 이용한 유기 나노 패턴의 제조 방법 {Electric field aided robotic nozzle printer and method for fabrication of organic nano sturcture}"
+  number: "10-2010-0097995 (2010.10.07)"
+  inventors_ko: "이태우, 민성용"
+  inventors_en: "이태우, 민성용"
+
+- year: 2010
+  status: pending
+  title_ko: "나노 와이어를 이용한 나노 패턴의 제조 방법 {Method for formation of nano pattern using nano wire}"
+  title_en: "나노 와이어를 이용한 나노 패턴의 제조 방법 {Method for formation of nano pattern using nano wire}"
+  number: "10-2010-0097996 (2010.10.07)"
+  inventors_ko: "이태우, 민성용, 김태식"
+  inventors_en: "이태우, 민성용, 김태식"
+
+- year: 2011
+  status: registered
+  title_ko: "전기장 보조 로보틱 노즐 프린터 및 이를 이용한 정렬된 유기 와이어 패턴의 제조 방법 {Electric field aided robotic nozzle printer and method for fabrication of aligned organic wire patterns}"
+  title_en: "전기장 보조 로보틱 노즐 프린터 및 이를 이용한 정렬된 유기 와이어 패턴의 제조 방법 {Electric field aided robotic nozzle printer and method for fabrication of aligned organic wire patterns}"
+  number: "10-2011-0100762 (2011.10.04), 등록 10-1374401 (2014.03.07)"
+  inventors_ko: "이태우, 민성용"
+  inventors_en: "이태우, 민성용"
+
+- year: 2011
+  status: registered
+  title_ko: "미세 패턴 형성 방법 및 이를 이용한 미세 채널 트랜지스터 및 미세 채널 발광트랜지스터의 형성방법 {Method for formation of micro- and nano-scale patterns ...}"
+  title_en: "미세 패턴 형성 방법 및 이를 이용한 미세 채널 트랜지스터 및 미세 채널 발광트랜지스터의 형성방법 {Method for formation of micro- and nano-scale patterns ...}"
+  number: "10-2011-0100763 (2011.10.04), 등록 10-1407209 (2014.06.05)"
+  inventors_ko: "이태우, 민성용, 김태식"
+  inventors_en: "이태우, 민성용, 김태식"
+
+- year: 2012
+  status: registered
+  title_ko: "스티렌 단량체를 이용한 전기 방사된 폴리스티렌 나노 섬유의 제조 방법 및 폴리스티렌-양자점 하이브리드 나노섬유의 제조 방법"
+  title_en: "스티렌 단량체를 이용한 전기 방사된 폴리스티렌 나노 섬유의 제조 방법 및 폴리스티렌-양자점 하이브리드 나노섬유의 제조 방법"
+  number: "10-2012-0095125 (2012.08.29), 등록 10-1336251 (2013.11.27)"
+  inventors_ko: "이태우, 민성용, 김성지, 방지원, 박준혁"
+  inventors_en: "이태우, 민성용, 김성지, 방지원, 박준혁"
+
+- year: 2012
+  status: registered
+  title_ko: "수평 정렬된 단결정 무기물 나노 와이어 패턴의 제조 방법"
+  title_en: "수평 정렬된 단결정 무기물 나노 와이어 패턴의 제조 방법"
+  number: "10-2012-0105843 (2012.09.24), 등록 10-1358067 (2014.01.22)"
+  inventors_ko: "민성용, 이태우"
+  inventors_en: "민성용, 이태우"
+
+- year: 2012
+  status: registered
+  title_ko: "정렬된 발광성 유기 나노섬유를 포함하는 레이저 소자 및 그의 제조 방법"
+  title_en: "정렬된 발광성 유기 나노섬유를 포함하는 레이저 소자 및 그의 제조 방법"
+  number: "10-2012-0153483 (2012.12.26), 등록 10-1343013 (2013.12.12)"
+  inventors_ko: "이태우, 민성용"
+  inventors_en: "이태우, 민성용"
+
+- year: 2012
+  status: registered
+  title_ko: "정렬된 발광성 유기 나노섬유를 포함하는 색변환 형광층 및 그의 제조 방법"
+  title_en: "정렬된 발광성 유기 나노섬유를 포함하는 색변환 형광층 및 그의 제조 방법"
+  number: "10-2012-0153484 (2012.12.26), 등록 10-1436990 (2014.08.27)"
+  inventors_ko: "이태우, 민성용"
+  inventors_en: "이태우, 민성용"
+
+- year: 2013
+  status: pending
+  title_ko: "정렬된 산화물 반도체 나노와이어를 포함하는 전계효과 트랜지스터 어레이 및 그의 제조방법"
+  title_en: "정렬된 산화물 반도체 나노와이어를 포함하는 전계효과 트랜지스터 어레이 및 그의 제조방법"
+  number: "10-2013-0017017 (2013.02.18)"
+  inventors_ko: "이태우, 민성용"
+  inventors_en: "이태우, 민성용"
+
+- year: 2013
+  status: registered
+  title_ko: "정렬된 산화물 반도체 와이어 패턴의 제조방법 및 이를 이용한 전자소자"
+  title_en: "정렬된 산화물 반도체 와이어 패턴의 제조방법 및 이를 이용한 전자소자"
+  number: "10-2013-0017217 (2013.02.18), 등록 10-1486955 (2015.01.21)"
+  inventors_ko: "민성용, 이태우"
+  inventors_en: "민성용, 이태우"
+
+- year: 2014
+  status: pending
+  title_ko: "전자소자 어레이 및 그의 제조방법 {ELECTRONIC DEVICE ARRAY AND METHOD FOR PREPARING THE SAME}"
+  title_en: "전자소자 어레이 및 그의 제조방법 {ELECTRONIC DEVICE ARRAY AND METHOD FOR PREPARING THE SAME}"
+  number: "10-2014-0032525 (2014.03.20)"
+  inventors_ko: "김영훈, 민성용, 이태우"
+  inventors_en: "김영훈, 민성용, 이태우"
+
+- year: 2014
+  status: registered
+  title_ko: "메모리 소자용 유기 도핑 재료, 이를 포함하는 비휘발성 메모리 소자 및 이의 제조방법"
+  title_en: "메모리 소자용 유기 도핑 재료, 이를 포함하는 비휘발성 메모리 소자 및 이의 제조방법"
+  number: "10-2014-0098158 (2014.07.31), 등록 10-1636137 (2016.06.28)"
+  inventors_ko: "민성용, 이태우, 안교한, 문현수, Xu Wentao"
+  inventors_en: "민성용, 이태우, 안교한, 문현수, Xu Wentao"
+
+- year: 2014
+  status: pending
+  title_ko: "시냅스 모방 소자 및 이의 제조방법"
+  title_en: "시냅스 모방 소자 및 이의 제조방법"
+  number: "10-2014-0104279 (2014.08.12)"
+  inventors_ko: "민성용, 이태우, Xu Wentao"
+  inventors_en: "민성용, 이태우, Xu Wentao"
+
+- year: 2014
+  status: registered
+  title_ko: "정렬된 산화물 반도체 나노와이어를 포함하는 전계효과 트랜지스터 어레이 및 그의 제조방법"
+  title_en: "정렬된 산화물 반도체 나노와이어를 포함하는 전계효과 트랜지스터 어레이 및 그의 제조방법"
+  number: "10-2014-0175107 (2014.12.08), 등록 10-1486956 (2015.01.21)"
+  inventors_ko: "이태우, 민성용"
+  inventors_en: "이태우, 민성용"
+
+- year: 2015
+  status: pending
+  title_ko: "전자소자 어레이 및 그의 제조방법"
+  title_en: "전자소자 어레이 및 그의 제조방법"
+  number: "10-2015-0038480 (2015.03.19)"
+  inventors_ko: "김영훈, 민성용, 이태우"
+  inventors_en: "김영훈, 민성용, 이태우"
+
+- year: 2015
+  status: pending
+  title_ko: "금속 나노선 패턴 제조방법 {Method for fabricating metal nanowire pattern}"
+  title_en: "금속 나노선 패턴 제조방법 {Method for fabricating metal nanowire pattern}"
+  number: "10-2015-0117193 (2015.08.20)"
+  inventors_ko: "민성용, 이태우"
+  inventors_en: "민성용, 이태우"
+
+- year: 2017
+  status: pending
+  title_ko: "색변환 필름, 및 이를 포함하는 백라이트 유닛 및 디스플레이 장치"
+  title_en: "색변환 필름, 및 이를 포함하는 백라이트 유닛 및 디스플레이 장치"
+  number: "KR20170160682A (2017.11.28)"
+  inventors_ko: "김지호, 신동목, 김나리, 오혜미, 민성용"
+  inventors_en: "김지호, 신동목, 김나리, 오혜미, 민성용"
+
+- year: 2018
+  status: pending
+  title_ko: "색변환 필름을 포함하는 조명 모듈 {LIGHT MODULE COMPRISING THE COLOR CONVERSION FILM}"
+  title_en: "색변환 필름을 포함하는 조명 모듈 {LIGHT MODULE COMPRISING THE COLOR CONVERSION FILM}"
+  number: "KR20180149446A (2018.11.28)"
+  inventors_ko: "민성용, 신동목, 김나리, 김지호, 오혜미"
+  inventors_en: "민성용, 신동목, 김나리, 김지호, 오혜미"
+
+- year: 2018
+  status: pending
+  title_ko: "디스플레이 장치 {DISPLAY APPRATUS}"
+  title_en: "디스플레이 장치 {DISPLAY APPRATUS}"
+  number: "KR20180005007A (2018.01.15)"
+  inventors_ko: "김나리, 신동목, 김지호, 오혜미, 민성용"
+  inventors_en: "김나리, 신동목, 김지호, 오혜미, 민성용"
+
+- year: 2018
+  status: pending
+  title_ko: "색변환 필름, 이를 포함하는 백라이트 유닛 및 디스플레이 장치"
+  title_en: "색변환 필름, 이를 포함하는 백라이트 유닛 및 디스플레이 장치"
+  number: "KR20180008218A (2018.01.23)"
+  inventors_ko: "민성용, 신동목, 김나리, 김지호, 오혜미"
+  inventors_en: "민성용, 신동목, 김나리, 김지호, 오혜미"
+
+- year: 2018
+  status: pending
+  title_ko: "색변환 필름, 이를 포함하는 백라이트 유닛 및 디스플레이 장치"
+  title_en: "색변환 필름, 이를 포함하는 백라이트 유닛 및 디스플레이 장치"
+  number: "KR20180008219A (2018.01.23)"
+  inventors_ko: "김지호, 신동목, 김나리, 오혜미, 민성용"
+  inventors_en: "김지호, 신동목, 김나리, 오혜미, 민성용"
+
+- year: 2019
+  status: pending
+  title_ko: "화합물, 이를 포함하는 색변환 필름, 백라이트 유닛 및 디스플레이 장치"
+  title_en: "화합물, 이를 포함하는 색변환 필름, 백라이트 유닛 및 디스플레이 장치"
+  number: "KR20190050475A (2019.04.30)"
+  inventors_ko: "오혜미, 신동목, 김나리, 김지호, 민성용"
+  inventors_en: "오혜미, 신동목, 김나리, 김지호, 민성용"
+
+- year: 2019
+  status: pending
+  title_ko: "색변환 필름, 이를 포함하는 백라이트 유닛 및 디스플레이 장치"
+  title_en: "색변환 필름, 이를 포함하는 백라이트 유닛 및 디스플레이 장치"
+  number: "KR20190143267A (2019.11.11)"
+  inventors_ko: "민성용, 신동목, 김나리, 김지호, 오혜미"
+  inventors_en: "민성용, 신동목, 김나리, 김지호, 오혜미"
+
+- year: 2019
+  status: pending
+  title_ko: "색변환 필름, 이를 포함하는 백라이트 유닛 및 디스플레이 장치"
+  title_en: "색변환 필름, 이를 포함하는 백라이트 유닛 및 디스플레이 장치"
+  number: "KR20190143272A (2019.11.11)"
+  inventors_ko: "민성용, 신동목, 김나리, 김지호, 오혜미"
+  inventors_en: "민성용, 신동목, 김나리, 김지호, 오혜미"
+
+- year: 2019
+  status: pending
+  title_ko: "색변환 필름, 이를 포함하는 백라이트 유닛 및 디스플레이 장치"
+  title_en: "색변환 필름, 이를 포함하는 백라이트 유닛 및 디스플레이 장치"
+  number: "KR20190143275A (2019.11.11)"
+  inventors_ko: "민성용, 신동목, 김나리, 김지호, 오혜미"
+  inventors_en: "민성용, 신동목, 김나리, 김지호, 오혜미"
+
+- year: 2019
+  status: pending
+  title_ko: "색변환 필름, 이를 포함하는 백라이트 유닛 및 디스플레이 장치"
+  title_en: "색변환 필름, 이를 포함하는 백라이트 유닛 및 디스플레이 장치"
+  number: "KR20190143279A (2019.11.11)"
+  inventors_ko: "민성용, 신동목, 김나리, 김지호, 오혜미"
+  inventors_en: "민성용, 신동목, 김나리, 김지호, 오혜미"
+
+- year: 2019
+  status: registered
+  title_ko: "마이크로 LED 디스플레이 모듈 및 이를 제조하는 방법"
+  title_en: "마이크로 LED 디스플레이 모듈 및 이를 제조하는 방법"
+  number: "P20190080039 (2019.07.03), 등록 P2642331 (2024.02.26)"
+  inventors_ko: "민성용, 이병훈, 이창준, 장경운, 정창규"
+  inventors_en: "민성용, 이병훈, 이창준, 장경운, 정창규"
+
+- year: 2019
+  status: pending
+  title_ko: "마이크로 엘이디 디스플레이 및 이의 제작 방법"
+  title_en: "마이크로 엘이디 디스플레이 및 이의 제작 방법"
+  number: "P20190098377 (2019.08.12)"
+  inventors_ko: "구자명, 민성용, 이병훈, 이창준, 정창규, 조영경"
+  inventors_en: "구자명, 민성용, 이병훈, 이창준, 정창규, 조영경"
+
+- year: 2019
+  status: pending
+  title_ko: "마이크로 엘이디 디스플레이 및 이의 제작 방법"
+  title_en: "마이크로 엘이디 디스플레이 및 이의 제작 방법"
+  number: "P20190108845 (2019.09.03)"
+  inventors_ko: "이병훈, 민성용, 이창준, 구자명"
+  inventors_en: "이병훈, 민성용, 이창준, 구자명"
+
+- year: 2019
+  status: registered
+  title_ko: "디스플레이 모듈 및 이의 제조 방법"
+  title_en: "디스플레이 모듈 및 이의 제조 방법"
+  number: "P20190126164 (2019.10.11), 등록 P2694326 (2024.08.07)"
+  inventors_ko: "정창규, 이창준, 조광래, 민성용, 박원순, 장경운, 황대석"
+  inventors_en: "정창규, 이창준, 조광래, 민성용, 박원순, 장경운, 황대석"
+
+- year: 2020
+  status: registered
+  title_ko: "디스플레이 모듈 {DISPLAY MODULE}"
+  title_en: "디스플레이 모듈 {DISPLAY MODULE}"
+  number: "P20200094751 (2020.07.29), 등록 2835341 (2025.07.14)"
+  inventors_ko: "이동훈, 민성용, 정영기, 백범기, 이창준"
+  inventors_en: "이동훈, 민성용, 정영기, 백범기, 이창준"
+
+- year: 2020
+  status: registered
+  title_ko: "디스플레이 모듈 및 그 제조 방법"
+  title_en: "디스플레이 모듈 및 그 제조 방법"
+  number: "P20200165031 (2020.11.30), 등록 P2880048 (2025.10.29)"
+  inventors_ko: "정창규, 민성용, 장경운, 조광래"
+  inventors_en: "정창규, 민성용, 장경운, 조광래"
+
+- year: 2021
+  status: pending
+  title_ko: "디스플레이 모듈 및 그 제조 방법"
+  title_en: "디스플레이 모듈 및 그 제조 방법"
+  number: "P20210018636 (2021.02.09)"
+  inventors_ko: "민성용, 이병훈, 이창준, 장경운, 정창규"
+  inventors_en: "민성용, 이병훈, 이창준, 장경운, 정창규"
+
+- year: 2021
+  status: pending
+  title_ko: "발광 소자 검사 방법 및 발광 소자 검사 장치"
+  title_en: "발광 소자 검사 방법 및 발광 소자 검사 장치"
+  number: "P20210151525 (2021.11.05)"
+  inventors_ko: "이창준, 민성용, 김진영, 장경운, 정창규"
+  inventors_en: "이창준, 민성용, 김진영, 장경운, 정창규"
+
+- year: 2021
+  status: pending
+  title_ko: "전계 발광 검사 장치 {ELECTROLUMINESCENCE INSPECTION APPARATUS}"
+  title_en: "전계 발광 검사 장치 {ELECTROLUMINESCENCE INSPECTION APPARATUS}"
+  number: "P20210182782 (2021.12.20)"
+  inventors_ko: "민성용, 정창규, 장경운, 황대석"
+  inventors_en: "민성용, 정창규, 장경운, 황대석"
+
+- year: 2022
+  status: pending
+  title_ko: "전계 발광 검사 장치 {ELECTROLUMINESCENCE INSPECTION APPARATUS}"
+  title_en: "전계 발광 검사 장치 {ELECTROLUMINESCENCE INSPECTION APPARATUS}"
+  number: "P20220003500 (2022.01.10)"
+  inventors_ko: "이창준, 김진영, 민성용, 장경운, 정창규, 황대석"
+  inventors_en: "이창준, 김진영, 민성용, 장경운, 정창규, 황대석"
+
+- year: 2022
+  status: registered
+  title_ko: "디스플레이 모듈의 리페어 방법 {REPAIR FOR DISPLAY MODULE}"
+  title_en: "디스플레이 모듈의 리페어 방법 {REPAIR FOR DISPLAY MODULE}"
+  number: "P20220045227 (2022.04.12), 등록 P2978499 (2026.06.11)"
+  inventors_ko: "이창준, 장경운, 손양수, 김정윤, 민성용, 황대석"
+  inventors_en: "이창준, 장경운, 손양수, 김정윤, 민성용, 황대석"
+
+- year: 2022
+  status: pending
+  title_ko: "발광 다이오드와 기판 간 접속 구조 및 이를 포함하는 디스플레이 모듈"
+  title_en: "발광 다이오드와 기판 간 접속 구조 및 이를 포함하는 디스플레이 모듈"
+  number: "P20220105049 (2022.08.22)"
+  inventors_ko: "이재문, 황대석, 김정윤, 김진영, 민성용, 이창준"
+  inventors_en: "이재문, 황대석, 김정윤, 김진영, 민성용, 이창준"
+
+- year: 2023
+  status: pending
+  title_ko: "마이크로 LED 칩 및 이의 제조 방법 {MICRO LIGHT EMITTING DIODE CHIP AND METHOD FOR MANUFACTURING THEREOF}"
+  title_en: "마이크로 LED 칩 및 이의 제조 방법 {MICRO LIGHT EMITTING DIODE CHIP AND METHOD FOR MANUFACTURING THEREOF}"
+  number: "P20230011738 (2023.01.30)"
+  inventors_ko: "민성용, 이창준, 장경운"
+  inventors_en: "민성용, 이창준, 장경운"
+
+- year: 2023
+  status: pending
+  title_ko: "디스플레이 모듈 및 이의 제조 방법"
+  title_en: "디스플레이 모듈 및 이의 제조 방법"
+  number: "P20230019303 (2023.02.14)"
+  inventors_ko: "민성용, 장경운, 김진영, 정창규"
+  inventors_en: "민성용, 장경운, 김진영, 정창규"
+
+- year: 2023
+  status: pending
+  title_ko: "디스플레이 모듈을 포함하는 디스플레이 장치 및 그 제조 방법"
+  title_en: "디스플레이 모듈을 포함하는 디스플레이 장치 및 그 제조 방법"
+  number: "P20230061747 (2023.05.12)"
+  inventors_ko: "정종훈, 김진영, 민성용, 이창준"
+  inventors_en: "정종훈, 김진영, 민성용, 이창준"
+
+- year: 2023
+  status: pending
+  title_ko: "접속 필름 및 이를 포함하는 디스플레이 패널 {CONNECTION FILM and display panel including the same}"
+  title_en: "접속 필름 및 이를 포함하는 디스플레이 패널 {CONNECTION FILM and display panel including the same}"
+  number: "P20230061846 (2023.05.12)"
+  inventors_ko: "정종훈, 김진영, 민성용, 이창준"
+  inventors_en: "정종훈, 김진영, 민성용, 이창준"
+
+- year: 2011
+  status: pending
+  title_ko: "Electric field aided robotic nozzle printer and method for fabrication of organic nano sturcture"
+  title_en: "Electric field aided robotic nozzle printer and method for fabrication of organic nano sturcture"
+  number: "PCT/KR2011/007411 (2011.10.06)"
+  inventors_ko: "T.-W. Lee, S.-Y. Min"
+  inventors_en: "T.-W. Lee, S.-Y. Min"
+
+- year: 2011
+  status: pending
+  title_ko: "Method for formation of micro- and nano-scale patterns and method for producing micro- and nano-scale channel transistor, and micro- and nano-scale channel light emitting transistor using the same"
+  title_en: "Method for formation of micro- and nano-scale patterns and method for producing micro- and nano-scale channel transistor, and micro- and nano-scale channel light emitting transistor using the same"
+  number: "PCT/KR2011/007413 (2011.10.06)"
+  inventors_ko: "T.-W. Lee, S.-Y. Min, T.-S. Kim"
+  inventors_en: "T.-W. Lee, S.-Y. Min, T.-S. Kim"
+
+- year: 2013
+  status: pending
+  title_ko: "Electric field aided robotic nozzle printer and method for fabrication of organic nano sturcture"
+  title_en: "Electric field aided robotic nozzle printer and method for fabrication of organic nano sturcture"
+  number: "US 13/877,806 (2013.04.04)"
+  inventors_ko: "T.-W. Lee, S.-Y. Min"
+  inventors_en: "T.-W. Lee, S.-Y. Min"
+
+- year: 2013
+  status: pending
+  title_ko: "Electric field aided robotic nozzle printer and method for fabrication of organic nano sturcture"
+  title_en: "Electric field aided robotic nozzle printer and method for fabrication of organic nano sturcture"
+  number: "JP 2013-532728 (2013.04.05)"
+  inventors_ko: "T.-W. Lee, S.-Y. Min"
+  inventors_en: "T.-W. Lee, S.-Y. Min"
+
+- year: 2013
+  status: registered
+  title_ko: "Electric field aided robotic nozzle printer and method for fabrication of organic nano sturcture"
+  title_en: "Electric field aided robotic nozzle printer and method for fabrication of organic nano sturcture"
+  number: "CN 201180048514.9 (2013.04.07), 등록 ZL 201180048514.9 (2016.03.02)"
+  inventors_ko: "T.-W. Lee, S.-Y. Min"
+  inventors_en: "T.-W. Lee, S.-Y. Min"
+
+- year: 2013
+  status: pending
+  title_ko: "Electric field aided robotic nozzle printer and method for fabrication of organic nano sturcture"
+  title_en: "Electric field aided robotic nozzle printer and method for fabrication of organic nano sturcture"
+  number: "DE 11 2011 103 398.2 (2013.04.08)"
+  inventors_ko: "T.-W. Lee, S.-Y. Min"
+  inventors_en: "T.-W. Lee, S.-Y. Min"
+
+- year: 2013
+  status: registered
+  title_ko: "Method for formation of micro- and nano-scale patterns and method for producing micro- and nano-scale channel transistor, and micro- and nano-scale channel light emitting transistor using the same"
+  title_en: "Method for formation of micro- and nano-scale patterns and method for producing micro- and nano-scale channel transistor, and micro- and nano-scale channel light emitting transistor using the same"
+  number: "US 13/877,875 (2013.04.04), 등록 8,852,979 (2014.10.07)"
+  inventors_ko: "T.-W. Lee, S.-Y. Min, T.-S. Kim"
+  inventors_en: "T.-W. Lee, S.-Y. Min, T.-S. Kim"
+
+- year: 2013
+  status: pending
+  title_ko: "Method for formation of micro- and nano-scale patterns and method for producing micro- and nano-scale channel transistor, and micro- and nano-scale channel light emitting transistor using the same"
+  title_en: "Method for formation of micro- and nano-scale patterns and method for producing micro- and nano-scale channel transistor, and micro- and nano-scale channel light emitting transistor using the same"
+  number: "JP 2013-532729 (2013.04.05)"
+  inventors_ko: "T.-W. Lee, S.-Y. Min, T.-S. Kim"
+  inventors_en: "T.-W. Lee, S.-Y. Min, T.-S. Kim"
+
+- year: 2013
+  status: pending
+  title_ko: "Method for formation of micro- and nano-scale patterns and method for producing micro- and nano-scale channel transistor, and micro- and nano-scale channel light emitting transistor using the same"
+  title_en: "Method for formation of micro- and nano-scale patterns and method for producing micro- and nano-scale channel transistor, and micro- and nano-scale channel light emitting transistor using the same"
+  number: "DE 11 2011 103 397.4 (2013.04.08)"
+  inventors_ko: "T.-W. Lee, S.-Y. Min, T.-S. Kim"
+  inventors_en: "T.-W. Lee, S.-Y. Min, T.-S. Kim"
+
+- year: 2013
+  status: registered
+  title_ko: "Method for formation of micro- and nano-scale patterns and method for producing micro- and nano-scale channel transistor, and micro- and nano-scale channel light emitting transistor using the same"
+  title_en: "Method for formation of micro- and nano-scale patterns and method for producing micro- and nano-scale channel transistor, and micro- and nano-scale channel light emitting transistor using the same"
+  number: "CN 201180059051.6 (2013.06.07), 등록 ZL 201180059051.6 (2015.01.07)"
+  inventors_ko: "T.-W. Lee, S.-Y. Min, T.-S. Kim"
+  inventors_en: "T.-W. Lee, S.-Y. Min, T.-S. Kim"
+
+- year: 2013
+  status: pending
+  title_ko: "METHOD OF MANUFACTURING HORIZONTALLY ALIGNED SINGLE CRYSTALLINE INORGANIC NANOWIRE PATTERNS"
+  title_en: "METHOD OF MANUFACTURING HORIZONTALLY ALIGNED SINGLE CRYSTALLINE INORGANIC NANOWIRE PATTERNS"
+  number: "PCT/KR2013/008072 (2013.09.06)"
+  inventors_ko: "T.-W. Lee, S.-Y. Min"
+  inventors_en: "T.-W. Lee, S.-Y. Min"
+
+- year: 2014
+  status: pending
+  title_ko: "A METHOD FOR FABRICATING ALIGNED OXIDE SEMICONDUCTOR WIRE PATTERNS AND ELECTRONIC DEVICES WITH THE SAME"
+  title_en: "A METHOD FOR FABRICATING ALIGNED OXIDE SEMICONDUCTOR WIRE PATTERNS AND ELECTRONIC DEVICES WITH THE SAME"
+  number: "PCT/KR2014/001316 (2014.02.18)"
+  inventors_ko: "T.-W. Lee, S.-Y. Min"
+  inventors_en: "T.-W. Lee, S.-Y. Min"
+
+- year: 2014
+  status: pending
+  title_ko: "Organic doping material for memory device, nonvolatile memory device including the same and method of manufacturing the same"
+  title_en: "Organic doping material for memory device, nonvolatile memory device including the same and method of manufacturing the same"
+  number: "PCT/KR2014/012670 (2014.12.23)"
+  inventors_ko: "T.-W. Lee, S.-Y. Min, W. Xu, H. Moon, K. H. Ahn"
+  inventors_en: "T.-W. Lee, S.-Y. Min, W. Xu, H. Moon, K. H. Ahn"
+
+- year: 2014
+  status: pending
+  title_ko: "Device imitating synaptic and method of manufacturing thereof"
+  title_en: "Device imitating synaptic and method of manufacturing thereof"
+  number: "PCT/KR2014/012656 (2014.12.22)"
+  inventors_ko: "T.-W. Lee, W. Xu, S.-Y. Min"
+  inventors_en: "T.-W. Lee, W. Xu, S.-Y. Min"
+
+- year: 2015
+  status: registered
+  title_ko: "METHOD OF MANUFACTURING HORIZONTALLY ALIGNED SINGLE CRYSTALLINE INORGANIC NANOWIRE PATTERNS"
+  title_en: "METHOD OF MANUFACTURING HORIZONTALLY ALIGNED SINGLE CRYSTALLINE INORGANIC NANOWIRE PATTERNS"
+  number: "US 14/420,041 (2015.02.06), 등록 9,099,310 (2015.08.04)"
+  inventors_ko: "T.-W. Lee, S.-Y. Min"
+  inventors_en: "T.-W. Lee, S.-Y. Min"
+
+- year: 2015
+  status: pending
+  title_ko: "A METHOD FOR FABRICATING ALIGNED OXIDE SEMICONDUCTOR WIRE PATTERNS AND ELECTRONIC DEVICES WITH THE SAME"
+  title_en: "A METHOD FOR FABRICATING ALIGNED OXIDE SEMICONDUCTOR WIRE PATTERNS AND ELECTRONIC DEVICES WITH THE SAME"
+  number: "US 14/768,265 (2015.08.17)"
+  inventors_ko: "T.-W. Lee, S.-Y. Min"
+  inventors_en: "T.-W. Lee, S.-Y. Min"
+
+- year: 2018
+  status: pending
+  title_ko: "COLOR CHANGING FILM, AND BACKLIGHT UNIT AND DISPLAY DEVICE WHICH COMPRISE SAME"
+  title_en: "COLOR CHANGING FILM, AND BACKLIGHT UNIT AND DISPLAY DEVICE WHICH COMPRISE SAME"
+  number: "PCT/KR2018/014257 (2018.11.20)"
+  inventors_ko: "김지호, 신동목, 김나리, 오혜미, 민성용"
+  inventors_en: "김지호, 신동목, 김나리, 오혜미, 민성용"
+
+- year: 2018
+  status: pending
+  title_ko: "LIGHTING MODULE COMPRISING COLOR CONVERSION FILM"
+  title_en: "LIGHTING MODULE COMPRISING COLOR CONVERSION FILM"
+  number: "PCT/KR2018/014867 (2018.11.28)"
+  inventors_ko: "민성용, 신동목, 김나리, 김지호, 오혜미"
+  inventors_en: "민성용, 신동목, 김나리, 김지호, 오혜미"
+
+- year: 2018
+  status: pending
+  title_ko: "LIGHTING MODULE COMPRISING COLOR CONVERSION FILM"
+  title_en: "LIGHTING MODULE COMPRISING COLOR CONVERSION FILM"
+  number: "EP2018882511 (2018.11.28)"
+  inventors_ko: "민성용, 신동목, 김나리, 김지호, 오혜미"
+  inventors_en: "민성용, 신동목, 김나리, 김지호, 오혜미"
+
+- year: 2019
+  status: pending
+  title_ko: "DISPLAY DEVICE"
+  title_en: "DISPLAY DEVICE"
+  number: "PCT/KR2019/000266 (2019.01.08)"
+  inventors_ko: "김나리, 신동목, 김지호, 오혜미, 민성용"
+  inventors_en: "김나리, 신동목, 김지호, 오혜미, 민성용"
+
+- year: 2019
+  status: pending
+  title_ko: "DISPLAY DEVICE"
+  title_en: "DISPLAY DEVICE"
+  number: "US 16/628327 (2019.01.08)"
+  inventors_ko: "김나리, 신동목, 김지호, 오혜미, 민성용"
+  inventors_en: "김나리, 신동목, 김지호, 오혜미, 민성용"
+
+- year: 2019
+  status: pending
+  title_ko: "DISPLAY DEVICE"
+  title_en: "DISPLAY DEVICE"
+  number: "EP2019738975 (2019.01.08)"
+  inventors_ko: "김나리, 신동목, 김지호, 오혜미, 민성용"
+  inventors_en: "김나리, 신동목, 김지호, 오혜미, 민성용"
+
+- year: 2019
+  status: pending
+  title_ko: "COLOR SHIFTING FILM, AND BACKLIGHT UNIT AND DISPLAY DEVICE WHICH COMPRISE SAME"
+  title_en: "COLOR SHIFTING FILM, AND BACKLIGHT UNIT AND DISPLAY DEVICE WHICH COMPRISE SAME"
+  number: "PCT/KR2019/000471 (2019.01.11)"
+  inventors_ko: "김지호, 신동목, 김나리, 오혜미, 민성용"
+  inventors_en: "김지호, 신동목, 김나리, 오혜미, 민성용"
+
+- year: 2019
+  status: pending
+  title_ko: "COLOR SHIFTING FILM, AND BACKLIGHT UNIT AND DISPLAY DEVICE WHICH COMPRISE SAME"
+  title_en: "COLOR SHIFTING FILM, AND BACKLIGHT UNIT AND DISPLAY DEVICE WHICH COMPRISE SAME"
+  number: "EP2019743605 (2019.01.11)"
+  inventors_ko: "김지호, 신동목, 김나리, 오혜미, 민성용"
+  inventors_en: "김지호, 신동목, 김나리, 오혜미, 민성용"
+
+- year: 2019
+  status: pending
+  title_ko: "COMPOUND AND COLOR CONVERSION FILM COMPRISING SAME, BACKLIGHT UNIT, AND DISPLAY DEVICE"
+  title_en: "COMPOUND AND COLOR CONVERSION FILM COMPRISING SAME, BACKLIGHT UNIT, AND DISPLAY DEVICE"
+  number: "PCT/KR2019/005172 (2019.04.30)"
+  inventors_ko: "오혜미, 신동목, 김나리, 김지호, 민성용"
+  inventors_en: "오혜미, 신동목, 김나리, 김지호, 민성용"
+
+- year: 2019
+  status: pending
+  title_ko: "COMPOUND AND COLOR CONVERSION FILM COMPRISING SAME, BACKLIGHT UNIT, AND DISPLAY DEVICE"
+  title_en: "COMPOUND AND COLOR CONVERSION FILM COMPRISING SAME, BACKLIGHT UNIT, AND DISPLAY DEVICE"
+  number: "EP2019795888 (2019.04.30)"
+  inventors_ko: "오혜미, 신동목, 김나리, 김지호, 민성용"
+  inventors_en: "오혜미, 신동목, 김나리, 김지호, 민성용"
+
+- year: 2019
+  status: pending
+  title_ko: "COLOUR CONVERSION FILM, AND BACK LIGHT UNIT AND DISPLAY DEVICE COMPRISING SAME"
+  title_en: "COLOUR CONVERSION FILM, AND BACK LIGHT UNIT AND DISPLAY DEVICE COMPRISING SAME"
+  number: "PCT/KR2019/015232 (2019.11.11)"
+  inventors_ko: "민성용, 신동목, 김나리, 김지호, 오혜미"
+  inventors_en: "민성용, 신동목, 김나리, 김지호, 오혜미"
+
+- year: 2019
+  status: pending
+  title_ko: "COLOUR CONVERSION FILM, AND BACK LIGHT UNIT AND DISPLAY DEVICE COMPRISING SAME"
+  title_en: "COLOUR CONVERSION FILM, AND BACK LIGHT UNIT AND DISPLAY DEVICE COMPRISING SAME"
+  number: "PCT/KR2019/015234 (2019.11.11)"
+  inventors_ko: "민성용, 신동목, 김나리, 김지호, 오혜미"
+  inventors_en: "민성용, 신동목, 김나리, 김지호, 오혜미"
+
+- year: 2019
+  status: pending
+  title_ko: "COLOUR CONVERSION FILM, AND BACK LIGHT UNIT AND DISPLAY DEVICE COMPRISING SAME"
+  title_en: "COLOUR CONVERSION FILM, AND BACK LIGHT UNIT AND DISPLAY DEVICE COMPRISING SAME"
+  number: "PCT/KR2019/015236 (2019.11.11)"
+  inventors_ko: "민성용, 신동목, 김나리, 김지호, 오혜미"
+  inventors_en: "민성용, 신동목, 김나리, 김지호, 오혜미"
+
+- year: 2019
+  status: pending
+  title_ko: "COLOUR CONVERSION FILM, AND BACK LIGHT UNIT AND DISPLAY DEVICE COMPRISING SAME"
+  title_en: "COLOUR CONVERSION FILM, AND BACK LIGHT UNIT AND DISPLAY DEVICE COMPRISING SAME"
+  number: "PCT/KR2019/015238 (2019.11.11)"
+  inventors_ko: "민성용, 신동목, 김나리, 김지호, 오혜미"
+  inventors_en: "민성용, 신동목, 김나리, 김지호, 오혜미"
+
+- year: 2020
+  status: pending
+  title_ko: "Micro LED 디스플레이의 수리 장치 및 이를 이용한 수리 방법"
+  title_en: "Micro LED 디스플레이의 수리 장치 및 이를 이용한 수리 방법"
+  number: "PCT/KR2020/008140 (2020.06.24)"
+  inventors_ko: "민성용, 이병훈, 이창준, 장경운, 정창규"
+  inventors_en: "민성용, 이병훈, 이창준, 장경운, 정창규"
+
+- year: 2020
+  status: registered
+  title_ko: "Micro LED 디스플레이의 수리 장치 및 이를 이용한 수리 방법"
+  title_en: "Micro LED 디스플레이의 수리 장치 및 이를 이용한 수리 방법"
+  number: "US 16/914863 (2020.06.29), 등록 US11404616 (2022.08.02)"
+  inventors_ko: "민성용, 이병훈, 이창준, 장경운, 정창규"
+  inventors_en: "민성용, 이병훈, 이창준, 장경운, 정창규"
+
+- year: 2020
+  status: pending
+  title_ko: "MICRO LED DISPLAY AND MANUFACTURING METHOD THEREOF"
+  title_en: "MICRO LED DISPLAY AND MANUFACTURING METHOD THEREOF"
+  number: "PCT/KR2020/010652 (2020.08.12)"
+  inventors_ko: "구자명, 민성용, 이병훈, 이창준, 정창규, 조영경"
+  inventors_en: "구자명, 민성용, 이병훈, 이창준, 정창규, 조영경"
+
+- year: 2020
+  status: registered
+  title_ko: "MICRO LED DISPLAY AND MANUFACTURING METHOD THEREOF"
+  title_en: "MICRO LED DISPLAY AND MANUFACTURING METHOD THEREOF"
+  number: "US 16/992004 (2020.08.12), 등록 US11417627 (2022.08.16)"
+  inventors_ko: "구자명, 민성용, 이병훈, 이창준, 정창규, 조영경"
+  inventors_en: "구자명, 민성용, 이병훈, 이창준, 정창규, 조영경"
+
+- year: 2020
+  status: pending
+  title_ko: "MICRO LED DISPLAY AND MANUFACTURING METHOD THEREOF"
+  title_en: "MICRO LED DISPLAY AND MANUFACTURING METHOD THEREOF"
+  number: "PCT/KR2020/011707 (2020.09.01)"
+  inventors_ko: "이병훈, 민성용, 이창준, 구자명"
+  inventors_en: "이병훈, 민성용, 이창준, 구자명"
+
+- year: 2020
+  status: pending
+  title_ko: "MICRO LED DISPLAY AND MANUFACTURING METHOD THEREOF"
+  title_en: "MICRO LED DISPLAY AND MANUFACTURING METHOD THEREOF"
+  number: "US 17/010231 (2020.09.02)"
+  inventors_ko: "이병훈, 민성용, 이창준, 구자명"
+  inventors_en: "이병훈, 민성용, 이창준, 구자명"
+
+- year: 2020
+  status: pending
+  title_ko: "DISPLAY MODULE AND MANUFACTURING METHOD THEREOF"
+  title_en: "DISPLAY MODULE AND MANUFACTURING METHOD THEREOF"
+  number: "PCT/KR2020/010671 (2020.08.12)"
+  inventors_ko: "정창규, 이창준, 조광래, 민성용, 박원순, 장경운, 황대석"
+  inventors_en: "정창규, 이창준, 조광래, 민성용, 박원순, 장경운, 황대석"
+
+- year: 2020
+  status: registered
+  title_ko: "DISPLAY MODULE AND MANUFACTURING METHOD THEREOF"
+  title_en: "DISPLAY MODULE AND MANUFACTURING METHOD THEREOF"
+  number: "US 16/991133 (2020.08.12), 등록 US11362249 (2022.06.14)"
+  inventors_ko: "정창규, 이창준, 조광래, 민성용, 박원순, 장경운, 황대석"
+  inventors_en: "정창규, 이창준, 조광래, 민성용, 박원순, 장경운, 황대석"
+
+- year: 2021
+  status: registered
+  title_ko: "DISPLAY MODULE AND MANUFACTURING METHOD THEREOF"
+  title_en: "DISPLAY MODULE AND MANUFACTURING METHOD THEREOF"
+  number: "CN 202080044894.8 (2021.12.17), 등록 ZL202080044894.8 (2025.04.18)"
+  inventors_ko: "정창규, 이창준, 조광래, 민성용, 박원순, 장경운, 황대석"
+  inventors_en: "정창규, 이창준, 조광래, 민성용, 박원순, 장경운, 황대석"
+
+- year: 2021
+  status: registered
+  title_ko: "MANUFACTURING METHOD OF A DISPLAY MODULE"
+  title_en: "MANUFACTURING METHOD OF A DISPLAY MODULE"
+  number: "DE 20873432.7 (2021.12.08), 등록 3966869 (2022.12.07)"
+  inventors_ko: "정창규, 이창준, 조광래, 민성용, 박원순, 장경운, 황대석"
+  inventors_en: "정창규, 이창준, 조광래, 민성용, 박원순, 장경운, 황대석"
+
+- year: 2021
+  status: registered
+  title_ko: "MANUFACTURING METHOD OF A DISPLAY MODULE"
+  title_en: "MANUFACTURING METHOD OF A DISPLAY MODULE"
+  number: "GB 20873432.7 (2021.12.08), 등록 3966869 (2022.12.07)"
+  inventors_ko: "정창규, 이창준, 조광래, 민성용, 박원순, 장경운, 황대석"
+  inventors_en: "정창규, 이창준, 조광래, 민성용, 박원순, 장경운, 황대석"
+
+- year: 2021
+  status: registered
+  title_ko: "MANUFACTURING METHOD OF A DISPLAY MODULE"
+  title_en: "MANUFACTURING METHOD OF A DISPLAY MODULE"
+  number: "EP 20873432.7 (2021.12.08), 등록 3966869 (2022.12.07)"
+  inventors_ko: "정창규, 이창준, 조광래, 민성용, 박원순, 장경운, 황대석"
+  inventors_en: "정창규, 이창준, 조광래, 민성용, 박원순, 장경운, 황대석"
+
+- year: 2021
+  status: pending
+  title_ko: "DISPLAY MODULE"
+  title_en: "DISPLAY MODULE"
+  number: "PCT/KR2021/005553 (2021.05.03)"
+  inventors_ko: "이동훈, 민성용, 정영기, 백범기, 이창준"
+  inventors_en: "이동훈, 민성용, 정영기, 백범기, 이창준"
+
+- year: 2022
+  status: registered
+  title_ko: "DISPLAY MODULE"
+  title_en: "DISPLAY MODULE"
+  number: "US 18/088313 (2022.12.23), 등록 12588339 (2026.03.24)"
+  inventors_ko: "이동훈, 민성용, 정영기, 백범기, 이창준"
+  inventors_en: "이동훈, 민성용, 정영기, 백범기, 이창준"
+
+- year: 2021
+  status: pending
+  title_ko: "DISPLAY MODULE AND MANUFACTURING METHOD AS THE SAME"
+  title_en: "DISPLAY MODULE AND MANUFACTURING METHOD AS THE SAME"
+  number: "PCT/KR2021/001394 (2021.02.03)"
+  inventors_ko: "정창규, 민성용, 장경운, 조광래"
+  inventors_en: "정창규, 민성용, 장경운, 조광래"
+
+- year: 2023
+  status: registered
+  title_ko: "DISPLAY MODULE AND MANUFACTURING METHOD AS THE SAME"
+  title_en: "DISPLAY MODULE AND MANUFACTURING METHOD AS THE SAME"
+  number: "US 18/139691 (2023.04.26), 등록 12660391 (2026.06.16)"
+  inventors_ko: "정창규, 민성용, 장경운, 조광래"
+  inventors_en: "정창규, 민성용, 장경운, 조광래"
+
+- year: 2021
+  status: pending
+  title_ko: "DISPLAY MODULE AND MANUFACTURING METHOD AS THE SAME"
+  title_en: "DISPLAY MODULE AND MANUFACTURING METHOD AS THE SAME"
+  number: "PCT/KR2021/019943 (2021.12.27)"
+  inventors_ko: "민성용, 이병훈, 이창준, 장경운, 정창규"
+  inventors_en: "민성용, 이병훈, 이창준, 장경운, 정창규"
+
+- year: 2022
+  status: pending
+  title_ko: "ELECTROLUMINESCENCE INSPECTION APPARATUS"
+  title_en: "ELECTROLUMINESCENCE INSPECTION APPARATUS"
+  number: "PCT/KR2022/013516 (2022.09.08)"
+  inventors_ko: "민성용, 정창규, 장경운, 황대석"
+  inventors_en: "민성용, 정창규, 장경운, 황대석"
+
+- year: 2024
+  status: pending
+  title_ko: "ELECTROLUMINESCENCE INSPECTION APPARATUS"
+  title_en: "ELECTROLUMINESCENCE INSPECTION APPARATUS"
+  number: "US 18/602717 (2024.03.12)"
+  inventors_ko: "민성용, 정창규, 장경운, 황대석"
+  inventors_en: "민성용, 정창규, 장경운, 황대석"
+
+- year: 2022
+  status: pending
+  title_ko: "ELECTROLUMINESCENCE INSPECTION APPARATUS"
+  title_en: "ELECTROLUMINESCENCE INSPECTION APPARATUS"
+  number: "PCT/KR2022/014389 (2022.09.27)"
+  inventors_ko: "이창준, 김진영, 민성용, 장경운, 정창규, 황대석"
+  inventors_en: "이창준, 김진영, 민성용, 장경운, 정창규, 황대석"
+
+- year: 2023
+  status: pending
+  title_ko: "REPAIR FOR DISPLAY MODULE"
+  title_en: "REPAIR FOR DISPLAY MODULE"
+  number: "PCT/KR2023/002049 (2023.02.13)"
+  inventors_ko: "이창준, 장경운, 손양수, 김정윤, 민성용, 황대석"
+  inventors_en: "이창준, 장경운, 손양수, 김정윤, 민성용, 황대석"
+
+- year: 2023
+  status: pending
+  title_ko: "발광 다이오드와 기판 간 접속 구조 및 이를 포함하는 디스플레이 모듈"
+  title_en: "발광 다이오드와 기판 간 접속 구조 및 이를 포함하는 디스플레이 모듈"
+  number: "PCT/KR2023/005997 (2023.05.03)"
+  inventors_ko: "이재문, 황대석, 김정윤, 김진영, 민성용, 이창준"
+  inventors_en: "이재문, 황대석, 김정윤, 김진영, 민성용, 이창준"
+
+- year: 2024
+  status: pending
+  title_ko: "마이크로 LED 칩 및 이의 제조 방법"
+  title_en: "마이크로 LED 칩 및 이의 제조 방법"
+  number: "PCT/KR2024/001333 (2024.01.29)"
+  inventors_ko: "민성용, 이창준, 장경운"
+  inventors_en: "민성용, 이창준, 장경운"
+
+- year: 2024
+  status: pending
+  title_ko: "MICRO LIGHT EMITTING DIODE CHIP AND METHOD FOR MANUFACTURING THEREOF"
+  title_en: "MICRO LIGHT EMITTING DIODE CHIP AND METHOD FOR MANUFACTURING THEREOF"
+  number: "US 18/440304 (2024.02.13)"
+  inventors_ko: "민성용, 이창준, 장경운"
+  inventors_en: "민성용, 이창준, 장경운"
+
+- year: 2024
+  status: pending
+  title_ko: "디스플레이 모듈 및 이의 제조 방법"
+  title_en: "디스플레이 모듈 및 이의 제조 방법"
+  number: "PCT/KR2024/001498 (2024.02.01)"
+  inventors_ko: "민성용, 장경운, 김진영, 정창규"
+  inventors_en: "민성용, 장경운, 김진영, 정창규"
+
+- year: 2024
+  status: pending
+  title_ko: "DISPLAY APPARTUS HAVING DISPLAY MODULE AND MANUFACTURING METHOD THEREOF"
+  title_en: "DISPLAY APPARTUS HAVING DISPLAY MODULE AND MANUFACTURING METHOD THEREOF"
+  number: "PCT/KR2024/095333 (2024.02.16)"
+  inventors_ko: "정종훈, 김진영, 민성용, 이창준"
+  inventors_en: "정종훈, 김진영, 민성용, 이창준"
