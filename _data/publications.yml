@@ -1,31 +1,220 @@
 # =====================================================================
-#  논문 데이터 — 여기에 항목만 추가하면 카운트/목록이 자동 갱신됩니다.
-#  role: first(1저자) / corresponding(교신) / co(공저)
-#  scope: international(국제, 기본값) / domestic(국내) — 논문/특허 리스트에서 국내/국제 소제목으로 나뉨
-#  highlight: true 를 추가하면 "연구 성과 하이라이트" 섹션에도 같이 뽑힙니다 (선택)
-#  KO/EN 공통으로 쓰되, 표시 문구만 언어별로 스크립트가 처리합니다.
+#  논문 데이터 — CV에 적힌 언어 그대로. 항목 추가 시 카운트/목록 자동 갱신.
+#  role: first(Primary author) / corresponding(교신) / co(공저)
 # =====================================================================
-- year: 2024
-  role: first
-  scope: international
-  highlight: true
-  authors: "Hong, G., Kim, S., Lee, J."
-  title: "Example paper title goes here"
-  venue: "Journal of Examples, 12(3), 45-67"
-  doi: "10.1234/example.2024.001"
-
-- year: 2023
-  role: corresponding
-  scope: international
-  authors: "Park, M., Hong, G."
-  title: "Second example paper"
-  venue: "IEEE Transactions on Examples, 8(2)"
-  doi: "10.1109/example.2023.002"
-
-- year: 2023
+- year: 2010
   role: co
-  scope: domestic
-  authors: "Kim, S., Hong, G., Choi, Y."
-  title: "Another paper title"
-  venue: "Proc. of Example Conference (EXAMPLE 2023)"
+  authors: "K. S. Yook, S. O. Jeon, S.-Y. Min, J. Y. Lee, H.-J. Yang, T. Noh, S.-K. Kang, T.-W. Lee"
+  title: "Highly efficient p-i-n and tandem organic light-emitting devices using a novel air-stable and low-temperature evaporable metal azide as an n-dopant"
+  venue: "Adv. Funct. Mater., 20, 1797-1802 (2010)"
+  doi: ""
+
+- year: 2010
+  role: co
+  authors: "J.-J. Park, X. Bulliard, J. M. Lee, J. Hur, K. Im, J.-M. Kim, P. Prabhakaran, N. Cho, K.-S. Lee, S.-Y. Min, T.-W. Lee, S. Yong, D.-Y. Yang"
+  title: "Pattern Formation of Silver Nanoparticles in 1-, 2-, and 3D Microstructures Fabricated by a Photo- and Thermal Reduction Method"
+  venue: "Adv. Funct. Mater., 20, 1-7 (2010)"
+  doi: ""
+
+- year: 2010
+  role: first
+  authors: "S.-Y. Min, Y. Kim, T. K. Lee, S. Seo, H. S. Jung, D. Kim, J. Lee, B.-J. Lee"
+  title: "The Effect of Porosity on the Elasticity of Pure Titanium: An Atomistic Simulation"
+  venue: "Met. Mater. Int., 16, 421-425 (2010)"
+  doi: ""
+
+- year: 2010
+  role: co
+  authors: "T.-W. Lee, J. Hwang, S.-Y. Min"
+  title: "Highly efficient hybrid inorganic-organic light-emitting diodes using air-stable metal oxides and a thick emitting layer"
+  venue: "ChemSusChem, 3, 1021-1023 (2010)"
+  doi: ""
+
+- year: 2011
+  role: co
+  authors: "M.-R. Choi, S.-H. Woo, T.-H. Han, K.-G. Lim, S.-Y. Min, W. M. Yun, O. K. Kwon, C. E. Park, K.-D. Kim, H.-K. Shin, M.-S. Kim, T. Noh, J. H. Park, K.-H. Shin, J. Jang, T.-W. Lee"
+  title: "Polyaniline-Based Conducting Polymer Compositions with a High Work Function for Hole-Injection Layers in Organic Light-Emitting Diodes: Formation of Ohmic Contacts"
+  venue: "ChemSusChem, 4, 363-368 (2011)"
+  doi: ""
+
+- year: 2012
+  role: co
+  authors: "T.-H. Han, M.-R. Choi, S.-H. Woo, S.-Y. Min, C.-L. Lee, T.-W. Lee"
+  title: "Molecularly Controlled Interfacial Layer Strategy Toward Highly Efficient Simple-Structured Organic Light-Emitting Diodes"
+  venue: "Adv. Mater., 24, 1487-1493 (2012)"
+  doi: ""
+
+- year: 2013
+  role: co
+  authors: "H. Cho, S.-Y. Min, T.-W. Lee"
+  title: "Electrospun Organic Nanofiber Electronics and Photonics"
+  venue: "Macromol. Mater. Eng., 298, 475-486 (2013)"
+  doi: ""
+
+- year: 2013
+  role: first
+  authors: "S.-Y. Min, T.-S. Kim, B. J. Kim, H. Cho, Y.-Y. Noh, H. Yang, J. H. Cho, T.-W. Lee"
+  title: "Large-scale organic nanowire lithography and electronics"
+  venue: "Nat. Commun., 4, 1773 (2013)"
+  doi: ""
+
+- year: 2014
+  role: first
+  authors: "S.-Y. Min, J. Bang, J. Park, C.-L. Lee, S. Lee, J.-J. Park, U. Jeong, S. Kim, T.-W. Lee"
+  title: "Electrospun polymer/quantum dot composite fibers as down conversion phosphor layers for white light-emitting diodes"
+  venue: "RSC Adv., 4, 11585-11589 (2014)"
+  doi: ""
+
+- year: 2014
+  role: co
+  authors: "W. Xu, T.-S. Lim, H.-K. Seo, S.-Y. Min, H. Cho, M.-H. Park, Y.-H. Kim, T.-W. Lee"
+  title: "N-Doped Graphene Field-Effect Transistors with Enhanced Electron Mobility and Air-stability"
+  venue: "Small, 10, 1999-2005 (2014)"
+  doi: ""
+
+- year: 2014
+  role: co
+  authors: "Y.-H. Kim, T.-H. Han, H. Cho, S.-Y. Min, C.-L. Lee, T.-W. Lee"
+  title: "Polyethylene Imine as an Ideal Interlayer for Highly Efficient Inverted Polymer Light-Emitting Diodes"
+  venue: "Adv. Funct. Mater., 24, 3808-3814 (2014)"
+  doi: ""
+
+- year: 2014
+  role: first
+  authors: "S. K. Hwang+, S.-Y. Min+, I. Bae, S. M. Cho, K. L. Kim, T.-W. Lee, C. Park"
+  title: "Non-Volatile Ferroelectric Memory with Position-Addressable Polymer Semiconducting Nanowire"
+  venue: "Small, 10, 1976-1984 (2014)"
+  doi: ""
+
+- year: 2014
+  role: co
+  authors: "W. Xu, H.-K. Seo, S.-Y. Min, H. Cho, T.-S. Lim, C.-Y. Oh, Y. Lee, T.-W. Lee"
+  title: "Rapid Fabrication of Designable Large-Scale-Aligned Graphene Nanoribbons by Electrohydrodynamic Nanowire Lithography"
+  venue: "Adv. Mater., 26, 3459-3463 (2014)"
+  doi: ""
+
+- year: 2014
+  role: co
+  authors: "Y. Lee, T.-S. Kim, S.-Y. Min, W. Xu, S.-H. Jeong, H.-K. Seo, T.-W. Lee"
+  title: "Individually Position-Addressable Metal-Nanofiber Electrodes for Large-Area Electronics"
+  venue: "Adv. Mater., 26, 8010-8016 (2014)"
+  doi: ""
+
+- year: 2015
+  role: first
+  authors: "S.-Y. Min, T.-S. Kim, Y. Lee, H. Cho, W. Xu, T.-W. Lee"
+  title: "Organic Nanowire Fabrication and Device Applications"
+  venue: "Small, 11, 45-62 (2015)"
+  doi: ""
+
+- year: 2015
+  role: first
+  authors: "S.-Y. Min, Y.-H. Kim, C. Wolf, T.-W. Lee"
+  title: "Synergistic Effects of Doping and Thermal Treatment on Organic Semiconducting Nanowires"
+  venue: "ACS Appl. Mater. Interfaces, 7, 18909-18914 (2015)"
+  doi: ""
+
+- year: 2016
+  role: co
+  authors: "W. Xu, Y. Lee, S.-Y. Min, C. Park, T.-W. Lee"
+  title: "Simple, Inexpensive, and Rapid Approach to Fabricate Cross-Shaped Memristors Using an Inorganic-Nanowire-Digital-Alignment Technique and a One-Step Reduction Process"
+  venue: "Adv. Mater., 28, 527-532 (2016)"
+  doi: ""
+
+- year: 2016
+  role: co
+  authors: "H. Cho, S.-H. Jeong, S.-Y. Min, T.-H. Han, M.-H. Park, Y.-H. Kim, W. Xu, T.-W. Lee"
+  title: "Scalable Noninvasive Organic Fiber Lithography for Large-Area Optoelectronics"
+  venue: "Adv. Optical Mater., 4, 967-972 (2016)"
+  doi: ""
+
+- year: 2016
+  role: co
+  authors: "H. Kim, J. Byun, S.-H. Bae, T. Ahmed, J.-X. Zhu, S.-J. Kwon, Y. Lee, S.-Y. Min, C. Wolf, H.-K. Seo, J.-H. Ahn, T.-W. Lee"
+  title: "On-Fabrication Solid-State N-Doping of Graphene by an Electron-Transporting Metal Oxide Layer for Efficient Inverted Organic Solar Cells"
+  venue: "Adv. Energy Mater., 6, 1600172 (2016)"
+  doi: ""
+
+- year: 2016
+  role: co
+  authors: "W. Xu, S.-Y. Min, H. Hwang, T.-W. Lee"
+  title: "Organic core-sheath nanowire artificial synapses with femtojoule energy consumption"
+  venue: "Sci. Adv., 2, e1501326 (2016)"
+  doi: ""
+
+- year: 2016
+  role: first
+  authors: "Y. Lee+, S.-Y. Min+, T.-S. Kim, S.-H. Jeong, J. Y. Won, H. Kim, W. Xu, J. K. Jeong, T.-W. Lee"
+  title: "Versatile metal nanowiring platform for large-scale nano- and opto-electronic devices"
+  venue: "Adv. Mater., 28, 9109-9116 (2016)"
+  doi: ""
+
+- year: 2017
+  role: co
+  authors: "H.-K. Seo, K. Kim, S.-Y. Min, Y. Lee, C. E. Park, R. Raj, T.-W. Lee"
+  title: "Direct growth of graphene-dielectric bi-layer structure on device substrates from Si-based polymer"
+  venue: "2D Materials, 4, 024001 (2017)"
+  doi: ""
+
+- year: 2017
+  role: co
+  authors: "Y. Lee, S.-Y. Min, T.-W. Lee"
+  title: "Large-Scale Highly Aligned Nanowire Printing"
+  venue: "Macromol. Mater. Eng., 302, 1600507 (2017)"
+  doi: ""
+
+- year: 2017
+  role: first
+  authors: "S.-Y. Min, Y. Lee, S. H. Kim, C. Park, T.-W. Lee"
+  title: "Room-Temperature-Processable Wire-Templated Nanoelectrodes for Flexible and Transparent All-Wire Electronics"
+  venue: "ACS Nano, 11, 3681-3689 (2017)"
+  doi: ""
+
+- year: 2017
+  role: co
+  authors: "H.-S. Ko, Y. Lee, S.-Y. Min, S.-J. Kwon, T.-W. Lee"
+  title: "Large-scale metal nanoelectrode arrays based on printed nanowire lithography for nanowire complementary inverters"
+  venue: "Nanoscale, 9, 15766-15772 (2017)"
+  doi: ""
+
+- year: 2019
+  role: co
+  authors: "T.-S. Kim, Y. Lee, W. Tao, Y. H. Kim, M. Kim, S.-Y. Min, T. H. Kim, H. W. Jang, T.-W. Lee"
+  title: "Direct-printed nanoscale metal-oxide-wire electronics"
+  venue: "Nano Energy, 58, 437-446 (2019)"
+  doi: ""
+
+- year: 2020
+  role: co
+  authors: "D. W. Kim, S.-Y. Min, Y. Lee, U. Jeong"
+  title: "Transparent flexible nanoline field-effect transistor array with high integration in a large area"
+  venue: "ACS Nano, 14, 907-918 (2020)"
+  doi: ""
+
+- year: 2010
+  role: co
+  authors: "T.-S. Kim, S.-Y. Min, M.-R. Choi, T.-W. Lee"
+  title: "패턴이 형성된 일차원 유기 반도체 나노와이어의 직접 제조법 및 응용"
+  venue: "Polymer Science and Technology, 21, 512-518 (2010)"
+  doi: ""
+
+- year: 2013
+  role: co
+  authors: "H. Cho, S.-Y. Min, T.-W. Lee"
+  title: "전기방사로 제조된 유기 반도체 나노섬유의 전자 및 광자 소자로의 응용"
+  venue: "CERAMIST, 16, 81-94 (2013)"
+  doi: ""
+
+- year: 2013
+  role: first
+  authors: "S.-Y. Min, T.-W. Lee"
+  title: "유기 반도체 나노와이어 정렬 기술 및 전자소자 응용"
+  venue: "NICE, 31, 430-437 (2013)"
+  doi: ""
+
+- year: 2013
+  role: first
+  authors: "T.-W. Lee, S.-Y. Min"
+  title: "전기방사 기술 기반의 유기 나노와이어 제조 및 정렬"
+  venue: "Bulletin of Korean Chemical Science and Technology, 5, 17-21 (2013)"
   doi: ""
