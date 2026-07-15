@@ -1,7 +1,9 @@
 # 작업 인수인계 (2026-07-15 세션)
 
 이 문서는 이번 세션에서 한 작업을 다른 컴퓨터/세션에서 이어가기 위한 참고용 기록입니다.
-**아직 아무것도 git commit 되지 않았습니다** — 아래 "Git 상태" 참고.
+
+**업데이트**: 세션 막바지에 push해서 `matrol-min.github.io`(main)에 이미 반영/배포됨.
+아래 "Git 병합 이슈" 항목 꼭 읽을 것 — 원격에 이 로컬과 무관한 별도 초기 히스토리가 있었음.
 
 ## 오늘 한 일 요약
 
@@ -62,44 +64,68 @@
      폰트/간격 수정 지시할 때 이 표를 먼저 참고하면 됨.
    - `CLAUDE.md`에도 이 문서 존재와 `scope`/`highlight` 필드, divider 구현 방식을 반영해둠.
 
-7. **`_data/publications.yml`**: 아직 예시 데이터 그대로 (사용자가 나중에 실제 논문으로 교체 예정).
-   구조 검증용으로 `scope: domestic/international`, `highlight: true` 필드를 예시 3개 항목에 추가해둠.
+7. **`_data/publications.yml`**: 세션 막바지에 원격 병합으로 **실제 논문 31편으로 교체됨**
+   (아래 "Git 병합 이슈" 참고). `scope`/`highlight` 필드는 이 실제 데이터에는 아직 하나도 없어서
+   전부 international로 처리되고(국내 논문 있으면 `scope: domestic` 추가 필요), 하이라이트 섹션도
+   지금은 안 보임 (하이라이트로 뽑고 싶은 논문에 `highlight: true` 추가하면 됨).
 
-8. **`_data/patents.yml`**: 이전 세션(어제, 2026-07-14)에 이미 실제 특허 데이터로 채워져 있었음
-   (153건, git상 아직 미커밋 상태). 오늘 세션에서는 내용은 안 건드리고 집계 로직만 고침.
+8. **`_data/patents.yml`**: 이전 세션(어제, 2026-07-14)에 이미 실제 특허 데이터로 채워져 있었고
+   (153건), 오늘 이 버전을 그대로 유지하기로 결정 (원격의 더 오래된 789건짜리 버전 대신).
+   내용은 안 건드리고 집계 로직만 고침.
    - **참고**: 일부 항목의 `title_en`이 실제 영문 번역이 아니라 국문 원문이 그대로 들어가 있음
      (예: "마이크로 LED 칩 및 이의 제조 방법 {MICRO LIGHT EMITTING DIODE CHIP...}"). 영문 페이지에서
      이 항목들은 국문으로 노출됨 — 나중에 영문 번역 채우면 자동 반영됨. 오늘 작업 범위 밖이라 손대지 않음.
 
+## Git 병합 이슈 (중요, 꼭 읽을 것)
+
+세션 후반에 push하려다가 발견: **원격(`matrol-min.github.io`)에 이 로컬과 무관한 별도의 초기 커밋**
+(`a417c75 Initial CV`, 2026-06-29, 다른 컴퓨터에서 push)이 있었음. 로컬 저장소는 그 원격을 클론한 게
+아니라 별도로 `git init`된 것이었어서 두 히스토리가 완전히 갈라져 있었음 (`git merge-base`가 공통 조상을
+못 찾음).
+
+- 로컬 첫 커밋(`da4ed1d`)과 원격 첫 커밋(`a417c75`)을 직접 비교해보니, 차이는 딱
+  `_data/patents.yml`, `_data/publications.yml`, `.DS_Store`(mac 잡파일), `.github/workflows/build.yml`
+  (원격엔 이 CI 워크플로우 자체가 없었음) 뿐이었음. 나머지(`assets/main.scss`,
+  `scripts/build_publications.py`, `_sass`, `_includes` 등)는 완전히 동일한 기반이라 오늘 작업한
+  내용과 충돌할 일은 없었음.
+- **원격에는 실제 논문 데이터(`publications.yml`, 220줄, 2010년부터의 진짜 논문 목록)가 이미 있었고**,
+  로컬은 지금까지 예시 데이터만 갖고 있었음. 반대로 `patents.yml`은 로컬(어제 확장, 153건)이 원격
+  (789건 → 이건 사실 옛날 더 적은 버전)보다 최신이었음.
+- 사용자 결정: **`publications.yml`은 원격 것 사용, `patents.yml`/`index.html`/`en.html`/
+  `assets/main.scss`/`scripts/build_publications.py`는 로컬(오늘 작업) 것 사용**.
+- `git merge --allow-unrelated-histories origin/main` 실행 → 위 6개 파일 모두 add/add 충돌 발생
+  (텍스트가 실제로 같아도 공통 조상이 없어서 git이 못 알아봄) → `git checkout --ours/--theirs`로
+  파일 단위로 해결 → `.DS_Store`는 삭제 → merge 커밋 → `build_publications.py` 재실행해서
+  실제 논문 데이터 반영 → 커밋 → **push 완료 (`0fd96a6`)**.
+
 ## 검증한 것 / 안 한 것
 
-- 검증함: `build_publications.py` 정상 실행, front matter YAML 파싱 정상, 섹션 순서 정상,
-  국내/국제 특허 카운트(국내 45 + 국제 108 = 153) 합산 일치.
-  또한 `.cv-onecol` divider 스타일은 실제 `_sass`를 dart-sass로 로컬 컴파일해서
-  (`npx sass --load-path=_sass`) 정적 목업으로 브라우저에서 직접 확인.
+- 검증함: `build_publications.py` 정상 실행 (최종: 논문 31편, 특허 출원 153건/등록 70건),
+  front matter YAML 파싱 정상, 섹션 순서 정상, 국내/국제 특허 카운트(국내 45 + 국제 108 = 153) 합산 일치,
+  병합 후 conflict marker(`<<<<<<<`) 잔존 없음 확인. `.cv-onecol` divider 스타일은 실제 `_sass`를
+  dart-sass로 로컬 컴파일해서(`npx sass --load-path=_sass`) 정적 목업으로 브라우저에서 직접 확인.
+  **push 성공 확인함** (`git push origin main` → `a417c75..0fd96a6 main -> main`).
 - **검증 못 함**: 이 컴퓨터에 Ruby/Jekyll이 없어서(`ruby`, `bundle` 명령 없음) `bundle exec jekyll serve`로
-  실제 사이트 전체를 로컬 렌더링해서 보지는 못했음. Node.js는 있어서 sass만 별도 컴파일해 CSS 목업으로
-  검증한 것. **다른 컴퓨터에 Ruby가 있다면 `bundle install && bundle exec jekyll serve`로 최종
-  확인 권장.**
+  실제 사이트 전체를 로컬 렌더링해서 보지는 못했음. push 후 GitHub Actions가 실제로 정상 빌드·배포됐는지는
+  **다른 컴퓨터에서 Actions 탭이나 실제 사이트(matrol-min.github.io)를 열어서 확인 필요**.
 - PDF 생성(`node scripts/make_pdf.js`)은 이번 세션에서 시도 안 함.
 
 ## Git 상태 (이 세션 종료 시점)
 
-- 아직 **아무것도 커밋 안 됨**. `git status --short` 기준 변경 파일:
-  `_data/patents.yml`(수정, 어제 세션분), `_data/publications.yml`(수정),
-  `assets/main.scss`(수정), `en.html`(수정), `index.html`(수정), `scripts/build_publications.py`(수정)
-- 새 파일(미추적): `CLAUDE.md`, `docs/`(이 문서 포함), `.omc/`
-- **정리 안 된 임시 파일**: `_data/patents_260714.yml`, `_data/patents_260714b.yml`,
+- **push 완료** (`main` = `0fd96a6`). 커밋 히스토리: `da4ed1d`(로컬 초기) → `a417c75`(원격 초기,
+  merge로 편입) → `c5296b5`(인적사항/섹션/스크립트) → `9d14103`(원격 병합) → `0fd96a6`(실제 논문
+  데이터로 자동 섹션 재생성).
+- **정리 안 된 임시 파일 (미추적, 안 건드림)**: `_data/patents_260714.yml`, `_data/patents_260714b.yml`,
   `_data/patents_add.yml` — 어제 세션의 백업/초안으로 추정, 사용자가 "일단 무시하고 둬" 라고 해서
   안 건드림. 나중에 필요 없으면 삭제하면 됨.
-- `template/` 폴더: 원본 테마(`sproogen/resume-theme`) 참고용 예제 사본. 프로젝트 코드가 아니라
-  디자인 룰 대조용으로 있음 (오늘 확인해보니 `_sass`가 없어서 실제 대조엔 못 씀 — 우리 `_sass`가
+- `template/` 폴더(미추적): 원본 테마(`sproogen/resume-theme`) 참고용 예제 사본. 프로젝트 코드가 아니라
+  디자인 룰 대조용으로 있음 (확인해보니 `_sass`가 없어서 실제 대조엔 못 씀 — 우리 `_sass`가
   이미 원본 그대로임을 확인).
 
 ## 다음에 할 일 (남은 작업)
 
-1. `_data/publications.yml`을 실제 논문 데이터로 교체 (각 항목에 `scope` 필드 꼭 추가,
-   대표 논문엔 `highlight: true`)
+1. `_data/publications.yml`의 실제 논문 31편에 `scope`(국내/국제) 필드 추가 (없으면 전부 international
+   취급됨 — 국내 학회/저널 논문 있으면 `scope: domestic` 추가), 대표 논문엔 `highlight: true`로 표시
 2. 경력/학력/수상/연구 관심 분야/연구 프로젝트/기술 역량 섹션의 실제 내용 채우기
    (지금은 전부 플레이스홀더). 경력 채울 때 "주요 성과"(사내 성과) 내용을 경력 설명에 녹이기로
    했던 것도 같이 반영.
@@ -108,5 +134,5 @@
 5. 프로필 사진 실제 파일로 교체
 6. divider 소제목 색깔 재검토 (사용자가 나중에 다시 보자고 함)
 7. `_data/patents_260714*.yml`, `patents_add.yml` 백업 파일 정리 여부 결정
-8. Ruby/Jekyll 있는 환경에서 `bundle exec jekyll serve`로 최종 렌더링 확인
-9. 확인 끝나면 git add/commit (지금까지 전부 미커밋 상태)
+8. GitHub Actions 빌드가 실제로 성공했는지, 배포된 사이트가 의도대로 보이는지 확인
+   (Ruby 있는 환경이면 `bundle exec jekyll serve`로 로컬에서도 확인 가능)
