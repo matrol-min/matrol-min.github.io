@@ -72,23 +72,62 @@ button, input {
   display: block !important;
   padding-left: 0 !important;
   padding-right: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
   text-align: left !important;
   clear: both;
 }
 .cv-onecol .row.layout {
+  /* Bootstrap .row 기본값(margin-left/right: -15px)을 무력화 — 안 지우면 컬럼 패딩을 0으로
+     밀어버린 것과 겹쳐서 본문이 h3 섹션 제목 기준선보다 15px 왼쪽으로 밀려남 */
+  margin-left: 0 !important;
+  margin-right: 0 !important;
   margin-bottom: 1.1em;
   padding-bottom: 0.5em;
   border-bottom: 1px solid #f0f0f0;
   display: block;
 }
+.cv-onecol .details {
+  /* 원본 테마의 .layout-left .details { margin-bottom: 2rem } 무력화 —
+     2단(좌우) 레이아웃 전제로 넣은 여백이라 세로로 쌓는 1컬럼에서는 제목-본문 사이가 과하게 벌어짐 */
+  margin-bottom: 0;
+}
 .cv-onecol .details h4 {
+  font-size: 2rem;   /* 원본 테마 h4 기본값(2.5rem)보다 한 단계 작게 — 논문/특허 제목 전용 */
   margin-bottom: 4px;
   line-height: 1.35;
 }
 .cv-onecol .content { margin-top: 0; }
 .cv-onecol .content p { margin-bottom: 0; line-height: 1.5; }
-/* 서지정보는 약간 작고 차분하게 */
-.cv-onecol .content p { font-size: 0.95em; color: #444; }
+/* 원본 테마는 767px 이하 화면에서 .details 텍스트를 가운데 정렬로 강제 전환하는 반응형 규칙이 있음.
+   이 섹션은 항상 좌측 정렬 유지 (요약 표/카드형이 아니라 목록형이라 가운데 정렬이면 읽기 어려움). */
+.cv-onecol .details h4,
+.cv-onecol .content p {
+  text-align: left !important;
+}
+/* 서지정보는 차분한 색으로만 구분. 크기는 테마 기본 문단 크기(type.scss의 p,ul { font-size: 1.6rem })와
+   동일하게 맞춰서 다른 섹션(경력/학력 설명 등) 본문과 통일. rem 사용 — 이 테마는 전부 rem 기준이라
+   부모 요소 상속에 영향받는 em을 쓰면 의도한 크기와 달라질 수 있음 (예: .content div는 body의 1rem을
+   상속하므로 여기서 em을 쓰면 1.6rem이 아니라 그보다 작은 값이 나옴). */
+.cv-onecol .content p { font-size: 1.6rem; color: #444; }
+
+/* ===== 논문/특허 리스트 안 소제목 (국제/국내 구분 등) =====
+   content 항목에 layout: divider 를 주면 이 스타일이 적용됨.
+   item.layout 값이 section-list.html에서 이미 클래스명(layout-divider)으로 노출되므로
+   원본 include는 그대로 두고 여기서만 스타일링. 새 장식 대신 기존 강조 패턴(굵게 + 강조색) 재사용,
+   글자 크기는 논문/특허 제목(h4)과 동일하게 유지. */
+.cv-onecol .row.layout.layout-divider {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin: 1.6em 0 0.4em;
+}
+.cv-onecol .row.layout.layout-divider:first-child { margin-top: 0; }
+.cv-onecol .row.layout.layout-divider .details h4 {
+  font-weight: 700;
+  color: #477dca;
+  margin-bottom: 0;
+}
+.cv-onecol .row.layout.layout-divider .content { display: none; }
 
 /* ===== Publication Summary 표를 일반 섹션처럼 ===== */
 .cv-summary table {

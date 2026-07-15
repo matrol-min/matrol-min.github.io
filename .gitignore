@@ -1,0 +1,12 @@
+# Jekyll build output
+_site/
+.jekyll-cache/
+.bundle/
+vendor/bundle/
+
+# Generated PDFs (CI produces these as workflow artifacts, not committed)
+cv-ko.pdf
+cv-en.pdf
+
+# oh-my-claudecode operational state
+.omc/

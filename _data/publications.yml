@@ -1,10 +1,14 @@
 # =====================================================================
 #  논문 데이터 — 여기에 항목만 추가하면 카운트/목록이 자동 갱신됩니다.
 #  role: first(1저자) / corresponding(교신) / co(공저)
+#  scope: international(국제, 기본값) / domestic(국내) — 논문/특허 리스트에서 국내/국제 소제목으로 나뉨
+#  highlight: true 를 추가하면 "연구 성과 하이라이트" 섹션에도 같이 뽑힙니다 (선택)
 #  KO/EN 공통으로 쓰되, 표시 문구만 언어별로 스크립트가 처리합니다.
 # =====================================================================
 - year: 2024
   role: first
+  scope: international
+  highlight: true
   authors: "Hong, G., Kim, S., Lee, J."
   title: "Example paper title goes here"
   venue: "Journal of Examples, 12(3), 45-67"
@@ -12,6 +16,7 @@
 
 - year: 2023
   role: corresponding
+  scope: international
   authors: "Park, M., Hong, G."
   title: "Second example paper"
   venue: "IEEE Transactions on Examples, 8(2)"
@@ -19,6 +24,7 @@
 
 - year: 2023
   role: co
+  scope: domestic
   authors: "Kim, S., Hong, G., Choi, Y."
   title: "Another paper title"
   venue: "Proc. of Example Conference (EXAMPLE 2023)"
