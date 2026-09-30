@@ -48,7 +48,7 @@ button, input {
 /* ===== 논문/특허 배지 ===== */
 .cv-badge {
   display: inline-block;
-  font-size: 0.78em;
+  font-size: 1.3rem;
   font-weight: 600;
   padding: 1px 8px;
   border-radius: 10px;
@@ -134,7 +134,7 @@ button, input {
   border-collapse: collapse;
   margin: 0;
   width: auto;
-  font-size: 1rem;        /* 다른 섹션 본문과 동일 크기 */
+  font-size: 1.6rem;      /* 다른 섹션 본문과 동일 크기 (1rem=10px 기준 16px) */
   text-align: left;
 }
 .cv-summary table th { display: none; }

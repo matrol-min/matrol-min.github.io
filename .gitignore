@@ -10,3 +10,6 @@ cv-en.pdf
 
 # oh-my-claudecode operational state
 .omc/
+
+# macOS
+.DS_Store

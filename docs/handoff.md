@@ -136,3 +136,12 @@
 7. `_data/patents_260714*.yml`, `patents_add.yml` 백업 파일 정리 여부 결정
 8. GitHub Actions 빌드가 실제로 성공했는지, 배포된 사이트가 의도대로 보이는지 확인
    (Ruby 있는 환경이면 `bundle exec jekyll serve`로 로컬에서도 확인 가능)
+
+## 추가 확인 사항 처리 결과 (2026-09-30 세션)
+
+- 로컬 `main`을 `origin/main`(`44af700`)에 맞춤. 갈라져 있던 로컬 커밋 `00e4e75`는
+  `backup/local-00e4e75` 브랜치에 보존 (필요 없으면 삭제).
+- `.cv-badge` 폰트 `0.78em` → `1.3rem`(13px), `.cv-summary table` `1rem` → `1.6rem`(16px)로 수정.
+- `docs/font-scale.md`의 `1rem = 16px` 전제를 **`1rem = 10px`** (Bootstrap 3.3.5 루트 재정의)로 정정,
+  px 환산값 전부 수정.
+- `.gitignore`에 `.DS_Store` 추가.
