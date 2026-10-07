@@ -17,7 +17,8 @@ GitHub Pages로 배포되며, 논문·특허 실적은 데이터 파일만 고�
    `index.html`(국문)·`en.html`(영문) 맨 위 front matter에 각각 들어있다.
 
 3. **논문/특허는 자동 생성 영역.** `index.html`/`en.html`의 `content_sections:` 안에
-   `# <auto:publications>` ~ `# </auto:publications>` 마커로 둘러싸인 부분이 있는데,
+   `# <auto:summary>` ~ `# </auto:summary>`(연구실적 요약 + 하이라이트)와
+   `# <auto:publications>` ~ `# </auto:publications>`(논문 + 특허) 두 구역이 있는데,
    이 안쪽은 `scripts/build_publications.py`가 매번 덮어쓴다. **절대 이 마커 안을 직접
    수정하지 말 것** — 스크립트를 다시 돌리면 사라진다. 섹션을 추가/수정하려면 마커
    바깥(위나 아래)에 하거나, 스크립트 자체를 고친다.
@@ -150,7 +151,7 @@ push하면 `.github/workflows/build.yml`이 위 과정을 자동으로 실행하
 
 - `_sass/`와 원본 `_includes/*.html`(header.html, about.html, default.html 제외)은 되도록
   수정하지 않는다. 스타일 변경은 `assets/main.scss`에 추가.
-- 논문/특허 자동 구역(`# <auto:publications>` ~ `# </auto:publications>`) 안쪽을 직접
+- 논문/특허 자동 구역(`# <auto:summary>`, `# <auto:publications>` 두 구역) 안쪽을 직접
   편집하지 않는다 — `scripts/build_publications.py`가 재생성하면 사라짐.
 - 데이터를 고쳤으면 항상 `python scripts/build_publications.py`를 실행해서 두 페이지의
   자동 구역과 카운트를 갱신한 다음 커밋한다.

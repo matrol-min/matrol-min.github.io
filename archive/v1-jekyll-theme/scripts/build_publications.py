@@ -4,7 +4,9 @@ _data/publications.yml, _data/patents.yml 을 읽어서 카운트를 계산하�
 국문(index.html)과 영문(en.html)의 자동생성 구역(마커 사이)에
 언어에 맞는 문구로 연구실적 요약 / 연구 성과 하이라이트 / 논문 / 특허 섹션을 써넣습니다.
 
-마커:  # <auto:publications>  ~  # </auto:publications>
+마커 (두 구역, 페이지 안에서 위치를 따로 잡을 수 있음):
+  # <auto:summary>       ~ # </auto:summary>        연구실적 요약 + 연구 성과 하이라이트
+  # <auto:publications>  ~ # </auto:publications>   논문 + 특허
 
 논문/특허 리스트는 국내/국제로 나뉘어 각 그룹 위에 소제목(layout: divider)이 붙습니다.
 국제/국내 판정:
@@ -28,8 +30,8 @@ ROOT = Path(__file__).resolve().parent.parent
 PUBS = ROOT / "_data" / "publications.yml"
 PATS = ROOT / "_data" / "patents.yml"
 
-START = "# <auto:publications>"
-END = "# </auto:publications>"
+def markers(name):
+    return f"# <auto:{name}>", f"# </auto:{name}>"
 
 # 국제 특허로 판정하는 number 필드 접두어
 INTL_PATENT_PREFIXES = ("PCT", "US", "EP", "JP", "DE", "CN", "GB", "IN", "TW")
@@ -181,8 +183,9 @@ def emit_patent_group(lines, items, label, t, lang):
         add_patent_item(lines, p, t, lang)
 
 
-def build_block(lang):
+def build_summary_block(lang):
     t = L[lang]
+    START, END = markers("summary")
     lines = [START]
 
     # ---- 연구실적 요약 (표) ----
@@ -213,6 +216,14 @@ def build_block(lang):
         for p in highlighted:
             add_pub_item(lines, p, t)
         lines.append("")
+    lines.append(END)
+    return "\n".join(lines)
+
+
+def build_publications_block(lang):
+    t = L[lang]
+    START, END = markers("publications")
+    lines = [START]
 
     # ---- 논문 (국내/국제 소제목으로 구분) ----
     lines.append(f"  - title: {t['pub_section']}")
@@ -238,13 +249,20 @@ def build_block(lang):
     return "\n".join(lines)
 
 
-def inject(page_path, lang):
-    text = page_path.read_text(encoding="utf-8")
+def replace_block(text, name, block, page_name):
+    START, END = markers(name)
     if START not in text or END not in text:
-        raise SystemExit(f"‼ {page_path.name} 에 마커가 없습니다.")
+        raise SystemExit(f"‼ {page_name} 에 {START} 마커가 없습니다.")
     pre = text.split(START)[0]
     post = text.split(END, 1)[1]
-    page_path.write_text(pre + build_block(lang) + post, encoding="utf-8")
+    return pre + block + post
+
+
+def inject(page_path, lang):
+    text = page_path.read_text(encoding="utf-8")
+    text = replace_block(text, "summary", build_summary_block(lang), page_path.name)
+    text = replace_block(text, "publications", build_publications_block(lang), page_path.name)
+    page_path.write_text(text, encoding="utf-8")
 
 
 inject(ROOT / "index.html", "ko")
