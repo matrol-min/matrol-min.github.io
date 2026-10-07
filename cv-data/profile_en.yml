@@ -1,0 +1,194 @@
+# CV 인적사항·섹션 내용 (en) — CV docx에서 옮긴 것, 문구 수정 없음. 논문/특허는 publications.yml, patents.yml
+lang: en
+cv_name: Sung-Yong Min
+title: Ph.D.
+email: matrol.min@gmail.com
+email_title: Email
+about_title: About Me
+about_profile_image: /images/profile.jpg
+about_content: 'A sentence or two about your research interests and background.
+
+
+  Main areas: <mark>Area 1</mark>, <mark>Area 2</mark>
+
+  '
+sections:
+- title: Professional Experiences
+  layout: list
+  content:
+  - layout: left
+    title: Process Development Lab, Development Team, Visual Display Business, Samsung Electronics, Republic of Korea
+    sub_title: Principal Engineer
+    caption: 2023. 3−Present
+    bullets:
+    - Led development of bonding materials and processes for large-area Micro LED TV panels, covering the full cycle from R&D through mass production transfer
+    - Successfully developed a Micro LED pixel repair process achieving a repair success rate of over 99%
+    - Developed bonding materials (conductive adhesives, solders, anisotropic conductive films) tailored to Micro LED process requirements
+    - Performed root-cause analysis on pixel-level failures using FIB, SEM, EDS, and electrical characterization
+    - Supported mass production setup on-site and collaborated with manufacturing teams to resolve yield issues post-transfer
+    - Managed sub-team roadmap, process quality control, and member development as sub-team lead
+  - layout: left
+    title: Process Lab, Visual Display Business, Samsung Electronics, Republic of Korea
+    sub_title: Staff Engineer
+    caption: 2018. 12−2023. 2
+    bullets:
+    - Developed processes and materials for Micro LED displays, with focus on bonding, repair, and inspection
+    - Established process baseline and failure analysis methodology for large-area electrical interconnection reliability
+    - Joined Samsung Electronics as an experienced hire to build Micro LED bonding process capability from early stage
+  - layout: left
+    title: Information & Electronic Materials Research Center, LG Chem Daejeon R&D Campus, Republic of Korea
+    sub_title: Staff Researcher
+    caption: 2017. 1−2018. 11
+    bullets:
+    - Researches in “Liquid Crystal Displays (LCDs)”
+  - layout: left
+    title: Polymer Research Institute, POSTECH, Republic of Korea
+    sub_title: Postdoctoral Researcher
+    caption: 2015. 9−2016. 12
+    bullets:
+    - Researches in “Controllable metallic wire printing for all-wire electronics”
+- title: Education
+  layout: list
+  content:
+  - layout: left
+    title: POSTECH, Republic of Korea
+    sub_title: Ph.D in Materials Science and Engineering
+    caption: 2010. 3−2015. 8
+    description: 'Dissertation: “Large-area, Controlled Nanowire Printing for Nano-lithography and Electronics”.
+
+      '
+  - layout: left
+    title: POSTECH, Republic of Korea
+    sub_title: B.S. in Materials Science and Engineering
+    caption: 2006. 3−2010. 2
+- title: Research Interests
+  layout: text
+  content: '- Organic Nano-materials & their electronic applications
+
+    - Large-area electrohydrodynamic (EHD) printing
+
+    - Nano/micro-patterning processes
+
+    - Mass transfer process for Micro LEDs
+
+    - Development of Interconnecting/bonding Process and Pixel Repair Process for Micro LED display and Semiconductor Packaging
+
+    - Failure Analysis of Micro-electronics and Display circuit
+
+    '
+- title: Research Experiences
+  layout: list
+  content:
+  - layout: left
+    title: Fundamental studies on controllable wire electronics
+    sub_title: Ministry of Science, ICT & Future Planning, Republic of Korea
+    caption: 2013. 6−2016. 5
+  - layout: left
+    title: Fundamental studies on controlled organic/inorganic wire electronics
+    sub_title: POSTECH Basic Science Research Institute, Republic of Korea
+    caption: 2013. 3−2014. 2
+  - layout: left
+    title: Development of high density synapse and integration process for neuromorphic device
+    sub_title: Ministry of Science, ICT & Future Planning, Republic of Korea
+    caption: 2012. 9−2016. 8
+  - layout: left
+    title: Researches on soft nano-electronics using organic·inorganic nanowires
+    sub_title: Ministry of Science, ICT & Future Planning, Republic of Korea
+    caption: 2011. 9−2016. 6
+  - layout: left
+    title: Researches on patterned fiber OLEDs for large area display devices
+    sub_title: Ministry of Education, Science and Technology, Republic of Korea
+    caption: 2010. 11−2014. 6
+  - layout: left
+    title: Organic optoelectronic devices using organic semiconductor nanowires
+    sub_title: POSTECH Basic Science Research Institute, Republic of Korea
+    caption: 2009. 6−2010. 2
+  - layout: left
+    title: Development of next generation high performance organic/nano materials and printing process technology
+    sub_title: Ministry of Education, Science and Technology, Republic of Korea
+    caption: 2009. 3−2011. 8
+- title: Technical Skills
+  layout: text
+  content: '- Materials science background
+
+    - Organic electronics background
+
+    - Electrohydrodynamic nanowire printing technique
+
+    - Micro- & Nano-scale lithography
+
+    - Electronic devices fabrication & characterization (Transistors, Circuits)
+
+    - Micro LED Display fabrication (Large-area bonding, Defect repair) & failure analysis
+
+    - Bonding Process: Flip-Chip Bonding, ACF Bonding, Eutectic Bonding, Solder Bonding
+
+    - Microstructural characterization (SEM, TEM, FIB, and AFM)
+
+    - Electrical Reliability Characterization
+
+    - Process Quality Control / Mass Production Support
+
+    - Basic 3D modeling (AutoCAD, Solidworks, Blender)
+
+    - Basic computer programming languages (C, Python)
+
+    '
+- title: Honors and Awards
+  layout: list
+  content:
+  - layout: left
+    title: Best Rising Ph.D Award
+    sub_title: Department of Materials Science and Engineering, POSTECH
+    caption: 2016. 1. 8
+  - layout: left
+    title: Best Poster Award, Nominee
+    sub_title: 2015 Materials Research Society (MRS) Fall Meeting
+    caption: 2015. 12. 1
+  - layout: left
+    title: Best Paper Award, the 1st prize (Golden Prize)
+    sub_title: Samsung Electro-Mechanics 11th Best Paper Award
+    caption: 2015. 11. 1
+  - layout: left
+    title: Best Paper Award
+    sub_title: Department of Materials Science and Engineering, POSTECH
+    caption: 2013. 12. 26
+  - layout: left
+    title: 1nside Edge Best Paper Award, the 3rd prize (Bronze Prize)
+    sub_title: Samsung Electro-Mechanics 9th ‘1nside Edge’ Best Paper Award
+    caption: 2013. 11. 22
+  - layout: left
+    title: Excellent Poster Presentation Award
+    sub_title: 2013 Korea-Japan Joint Forum (KJF) International Conference on Organic Materials for Electronics and Photonics
+    caption: 2013. 8. 31
+  - layout: left
+    title: Best Poster Award
+    sub_title: The 24th International Conference on Molecular Electronics and Devices (2013 ME&D)
+    caption: 2013. 5. 16
+  - layout: left
+    title: Special Encouragement Award
+    sub_title: Department of Materials Science and Engineering, POSTECH
+    caption: 2012. 12. 26
+  - layout: left
+    title: Best Oral Presentation Award
+    sub_title: 2nd International Conference on Electrospinning 2012
+    caption: 2012. 5. 31
+  - layout: left
+    title: Best Patent Award
+    sub_title: Department of Materials Science and Engineering, POSTECH
+    caption: 2011. 12. 27
+  - layout: left
+    title: National Science and Technology Scholarship
+    caption: 2006. 3−2010. 2
+# --- 새 사이트(영문) 헤더/소개용 필드 ---
+site:
+  headline: Principal Engineer
+  org: Visual Display Business, Samsung Electronics
+  degree: Ph.D., Materials Science and Engineering, POSTECH
+  website: https://matrol-min.github.io/
+  photo: assets/photo.jpg
+  photo_alt: Portrait of Sung-Yong Min
+  profile:
+  - Process engineer with 7+ years of specialized experience in Micro LED display development at Samsung Electronics, spanning from early-stage R&D through mass production support.
+  - Successfully developed large-area bonding techniques and pixel repair processes, contributing to the commercialization of Micro LED displays. Expertise spans the full process lifecycle — process design, materials development, quality control, and failure/defect analysis — with hands-on involvement in mass production setup and ongoing yield troubleshooting in collaboration with manufacturing teams.
+  - Led a sub-team responsible for bonding & repair processes and served as Lab Manager overseeing process development operations. Seeking roles where deep expertise in advanced display or semiconductor packaging processes can drive meaningful impact.

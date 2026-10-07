@@ -1,0 +1,196 @@
+# CV 인적사항·섹션 내용 (ko) — CV docx에서 옮긴 것, 문구 수정 없음. 논문/특허는 publications.yml, patents.yml
+lang: ko
+cv_name: 민성용 (Sung-Yong Min)
+title: Ph.D.
+email: matrol.min@gmail.com
+email_title: 이메일
+about_title: 소개
+about_profile_image: /images/profile.jpg
+about_content: '연구 관심사나 한두 문장 자기소개를 여기에 적습니다.
+
+
+  주요 분야: <mark>분야1</mark>, <mark>분야2</mark>
+
+  '
+sections:
+- title: 경력
+  layout: list
+  content:
+  - layout: left
+    title: 공정개발Lab, 개발팀, 영상디스플레이사업부, 삼성전자, 대한민국
+    sub_title: 수석 엔지니어 (Principal Engineer, CL4)
+    caption: 2023. 3−현재
+    description: '- 마이크로LED 대면적 접속 소재 및 공정 개발 주도 — R&D ~ 양산 이관 전 단계 담당
+
+      - 마이크로LED 용 대면적 접속 소재/공정 기술 개발: ACF (Anisotropic Conductive Film) 접속 공법 안정화 (초기 픽셀 불량율 35 ppm, 신뢰성 불량율 2.5 → 0 ppm 달성)
+
+      - 마이크로LED 픽셀 수리 공정 개발: 수리 성공률 97.0% → 99.3% 달성 및 양산 승인
+
+      - 미세 칩 접속 공법 개발: 15×30 µm 마이크로LED 대응 접속재 및 수리 기술 개발
+
+      - FIB, SEM, EDS, 전기적 특성 분석 활용 픽셀 수준 불량 원인 규명 (Failure/Root-cause Analysis)
+
+      - 베트남 양산 공정 셋업 현장 지원 및 이관 안정화
+
+      '
+  - layout: left
+    title: 공정Lab, 영상디스플레이사업부, 삼성전자, 대한민국
+    sub_title: 책임 엔지니어 (Staff Engineer, CL3)
+    caption: 2018. 12−2023. 2
+    description: '- 마이크로LED 대면적 접속, 수리 공정 및 소재 연구개발
+
+      - 대면적 전기적 접속 초기 품질 및 신뢰성 확보를 위한 공정 베이스라인 수립 및 불량 분석
+
+      '
+  - layout: left
+    title: 정보전자소재 연구소, LG화학 대전 R&D 캠퍼스, 대한민국
+    sub_title: 책임 연구원 (Staff Researcher)
+    caption: 2017. 1−2018. 11
+    description: '- 액정 디스플레이(LCD) 용 고색순도 색변환 필름 연구 개발
+
+      '
+  - layout: left
+    title: 고분자연구소, 포항공과대학교 (POSTECH), 대한민국
+    sub_title: 박사후 연구원 (Postdoctoral Researcher)
+    caption: 2015. 9−2016. 12
+    description: '- 全배선 전자 소자(all-wire electronics)를 위한 제어 가능한 금속 나노와이어 프린팅 연구
+
+      '
+- title: 학력
+  layout: list
+  content:
+  - layout: left
+    title: 포항공과대학교 (POSTECH), 대한민국
+    sub_title: 신소재공학 박사 (Ph.D in Materials Science and Engineering)
+    caption: 2010. 3−2015. 8
+    description: '지도교수: 이태우.
+
+
+      학위논문: “Large-area, Controlled Nanowire Printing for Nano-lithography and Electronics”.
+
+      '
+  - layout: left
+    title: 포항공과대학교 (POSTECH), 대한민국
+    sub_title: 신소재공학 학사 (B.S. in Materials Science and Engineering)
+    caption: 2006. 3−2010. 2
+- title: 연구 관심 분야
+  layout: text
+  content: '- Organic Nano-materials & their electronic applications
+
+    - Large-area electrohydrodynamic (EHD) printing
+
+    - Nano/micro-patterning processes
+
+    - Mass transfer process for Micro LEDs
+
+    - Development of Interconnecting/bonding Process and Pixel Repair Process for Micro LED display and Semiconductor Packaging
+
+    - Failure Analysis of Micro-electronics and Display circuit
+
+    '
+- title: 연구 프로젝트
+  layout: list
+  content:
+  - layout: left
+    title: Fundamental studies on controllable wire electronics
+    sub_title: Ministry of Science, ICT & Future Planning, Republic of Korea
+    caption: 2013. 6−2016. 5
+  - layout: left
+    title: Fundamental studies on controlled organic/inorganic wire electronics
+    sub_title: POSTECH Basic Science Research Institute, Republic of Korea
+    caption: 2013. 3−2014. 2
+  - layout: left
+    title: Development of high density synapse and integration process for neuromorphic device
+    sub_title: Ministry of Science, ICT & Future Planning, Republic of Korea
+    caption: 2012. 9−2016. 8
+  - layout: left
+    title: Researches on soft nano-electronics using organic·inorganic nanowires
+    sub_title: Ministry of Science, ICT & Future Planning, Republic of Korea
+    caption: 2011. 9−2016. 6
+  - layout: left
+    title: Researches on patterned fiber OLEDs for large area display devices
+    sub_title: Ministry of Education, Science and Technology, Republic of Korea
+    caption: 2010. 11−2014. 6
+  - layout: left
+    title: Organic optoelectronic devices using organic semiconductor nanowires
+    sub_title: POSTECH Basic Science Research Institute, Republic of Korea
+    caption: 2009. 6−2010. 2
+  - layout: left
+    title: Development of next generation high performance organic/nano materials and printing process technology
+    sub_title: Ministry of Education, Science and Technology, Republic of Korea
+    caption: 2009. 3−2011. 8
+- title: 기술 역량
+  layout: text
+  content: '- Materials science background
+
+    - Organic electronics background
+
+    - Electrohydrodynamic nanowire printing technique
+
+    - Micro- & Nano-scale lithography
+
+    - Electronic devices fabrication & characterization (Transistors, Circuits)
+
+    - Micro LED Display fabrication (Large-area bonding, Defect repair) & failure analysis
+
+    - Bonding Process: Flip-Chip Bonding, ACF Bonding, Eutectic Bonding, Solder Bonding
+
+    - 도전성 접속 소재 개발 (도전성 접착제, ACF 등)
+
+    - Microstructural characterization (SEM, TEM, FIB, and AFM)
+
+    - 전기적 신뢰성 평가 (Electrical Reliability Characterization)
+
+    - 공정 품질 관리 및 양산 지원 (Process Quality Control / Mass Production Support)
+
+    - Basic 3D modeling (AutoCAD, Solidworks, Blender)
+
+    - Basic computer programming languages (C, Python)
+
+    '
+- title: 수상 및 표창
+  layout: list
+  content:
+  - layout: left
+    title: Best Rising Ph.D Award (최우수 신진박사상)
+    sub_title: Department of Materials Science and Engineering, POSTECH
+    caption: 2016. 1. 8
+  - layout: left
+    title: Best Poster Award, Nominee
+    sub_title: 2015 Materials Research Society (MRS) Fall Meeting
+    caption: 2015. 12. 1
+  - layout: left
+    title: Best Paper Award, the 1st prize (Golden Prize)
+    sub_title: Samsung Electro-Mechanics 11th Best Paper Award
+    caption: 2015. 11. 1
+  - layout: left
+    title: Best Paper Award (논문상)
+    sub_title: Department of Materials Science and Engineering, POSTECH
+    caption: 2013. 12. 26
+  - layout: left
+    title: 1nside Edge Best Paper Award, the 3rd prize (Bronze Prize)
+    sub_title: Samsung Electro-Mechanics 9th ‘1nside Edge’ Best Paper Award
+    caption: 2013. 11. 22
+  - layout: left
+    title: Excellent Poster Presentation Award
+    sub_title: 2013 Korea-Japan Joint Forum (KJF) International Conference on Organic Materials for Electronics and Photonics
+    caption: 2013. 8. 31
+  - layout: left
+    title: Best Poster Award
+    sub_title: The 24th International Conference on Molecular Electronics and Devices (2013 ME&D)
+    caption: 2013. 5. 16
+  - layout: left
+    title: Special Encouragement Award (특별 장려상)
+    sub_title: Department of Materials Science and Engineering, POSTECH
+    caption: 2012. 12. 26
+  - layout: left
+    title: Best Oral Presentation Award
+    sub_title: 2nd International Conference on Electrospinning 2012
+    caption: 2012. 5. 31
+  - layout: left
+    title: Best Patent Award (특허상)
+    sub_title: Department of Materials Science and Engineering, POSTECH
+    caption: 2011. 12. 27
+  - layout: left
+    title: National Science and Technology Scholarship
+    caption: 2006. 3−2010. 2

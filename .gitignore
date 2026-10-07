@@ -13,3 +13,6 @@ cv-en.pdf
 
 # macOS
 .DS_Store
+
+# Internal-use CV (not for publication)
+cv-data/*사내용*.docx
