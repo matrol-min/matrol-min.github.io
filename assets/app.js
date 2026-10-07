@@ -76,7 +76,8 @@
       '<header class="head">' + photo +
       '<div class="id"><h1>' + esc(P.name) + '</h1><div class="title">' + esc(P.title) + '</div></div>' +
       '<div class="contact"><span>' + esc(P.org) + '</span><span>' + esc(P.degree) + '</span><span><span class="lbl">' + esc(L.email) + '</span> <a href="mailto:' + esc(P.email) + '">' + esc(P.email) + '</a></span>' +
-      (P.website ? '<span><span class="lbl">' + esc(L.website) + '</span> <a href="' + esc(P.website) + '">' + esc(P.website.replace(/^https?:\/\//, '')) + '</a></span>' : '') + '</div></header>' +
+      (P.website ? '<span><span class="lbl">' + esc(L.website) + '</span> <a href="' + esc(P.website) + '">' + esc(P.website.replace(/^https?:\/\//, '')) + '</a></span>' : '') +
+      '<span class="cv-dl" hidden><span class="lbl">' + esc(L.cv) + '</span> <a href="assets/cv.pdf" download="Sung-Yong_Min_CV.pdf">' + esc(L.downloadCv) + '</a></span></div></header>' +
       sec('profile', L.profile, '<ul class="plain-list profile-list">' + D.profile.map(function (t) { return '<li>' + esc(t) + '</li>'; }).join('') + '</ul>') +
       sec('summary', L.summary,
         '<div class="metrics">' + metrics.map(function (m) {
@@ -107,6 +108,9 @@
 
     app.innerHTML = html;
     document.title = P.name + ' — Curriculum Vitae';
+
+    // show the download link only when the generated PDF exists (CI builds it; locally run scripts/make_pdf.sh)
+    fetch('assets/cv.pdf', { method: 'HEAD' }).then(function (r) { if (r.ok) app.querySelector('.cv-dl').hidden = false; }).catch(function () {});
 
     var img = app.querySelector('.photo');
     img.addEventListener('error', function () {

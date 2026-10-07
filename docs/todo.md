@@ -13,18 +13,18 @@
 - [x] (2026-10-07 완료) **Experience 항목 보강**: 영문 CV(`cv-data/민성용_CurrVitae_사내용_20260625.docx` 등) 내용을 참고해 담당 업무·성과 bullet 추가. 현재는 직책/조직/기간만 있음(`entries()`는 bullets 지원, `build_data.py`의 experience bullets가 빈 배열 → yml에서 읽도록 확장 필요). 이때 '주요 성과'(사내 성과)는 별도 섹션 없이 경력 설명에 녹이기로 한 이전 결정 반영.
 
 ## CV 파일(PDF/DOCX) 제공
-- [ ] **CV를 docx / pdf로 전환 테스트**: 현재 사이트를 PDF로 인쇄하면 A4 25쪽(Chrome headless `--print-to-pdf`로 확인). docx는 별도 변환 경로 필요(예: HTML→docx 변환 도구 또는 yml→docx 직접 생성) — 품질·서식 비교 후 방식 결정.
-- [ ] **사이트에 CV PDF 다운로드 링크 추가**: 헤더 또는 Research Summary 근처에 "Download CV (PDF)" 링크(인쇄 시 숨김).
-- [ ] **페이지 갱신 시 업로드된 CV PDF 자동 갱신**: yml 수정 → push 시 GitHub Actions가 `build_data.py` 실행 → 헤드리스 Chrome으로 PDF 생성 → 배포물에 포함(예: `assets/cv.pdf` 또는 Pages 아티팩트). 기존 `.github/workflows/build.yml` 교체 작업과 함께 진행. 최신 PDF가 항상 사이트와 일치하도록 커밋된 PDF를 쓰지 않고 CI에서 생성하는 방식 권장.
+- [x] (2026-10-07 완료, docx는 불필요로 결정) **CV를 pdf로 전환 테스트**: 현재 사이트를 PDF로 인쇄하면 A4 25쪽(Chrome headless `--print-to-pdf`로 확인). docx는 별도 변환 경로 필요(예: HTML→docx 변환 도구 또는 yml→docx 직접 생성) — 품질·서식 비교 후 방식 결정.
+- [x] (2026-10-07 완료) **사이트에 CV PDF 다운로드 링크 추가**: 헤더 또는 Research Summary 근처에 "Download CV (PDF)" 링크(인쇄 시 숨김).
+- [x] (2026-10-07 완료: `scripts/make_pdf.sh` + 새 `.github/workflows/build.yml`, 푸시 후 Actions 실행 확인 필요) **페이지 갱신 시 업로드된 CV PDF 자동 갱신**: yml 수정 → push 시 GitHub Actions가 `build_data.py` 실행 → 헤드리스 Chrome으로 PDF 생성 → 배포물에 포함(예: `assets/cv.pdf` 또는 Pages 아티팩트). 기존 `.github/workflows/build.yml` 교체 작업과 함께 진행. 최신 PDF가 항상 사이트와 일치하도록 커밋된 PDF를 쓰지 않고 CI에서 생성하는 방식 권장.
 
 ## 한글 페이지
 - [ ] `data/labels.ko.json` + `profile_ko.yml` 기반 `index.ko.html`(또는 `ko/`) 추가. 레이아웃은 복제하지 말고 `<html lang="ko">` + 폰트 스택(`:lang(ko)`)만 교체. 영문 페이지 헤더에 KO/EN 링크 자리 확보.
 - [ ] `build_data.py`를 언어 인자(`--lang ko`)로 확장해 `data/cv.ko.json` 생성(국문 title_ko/inventors_ko 사용).
 
 ## 배포 / 정리
-- [ ] **GitHub Actions**(`.github/workflows/build.yml`)가 옛 Jekyll 구조(`scripts/build_publications.py`)를 가정함. 새 정적 사이트용으로 교체 필요(Jekyll 빌드 제거, `python3 scripts/build_data.py` 실행 후 루트 그대로 Pages 배포, 필요하면 PDF 단계 유지).
-- [ ] `data/cv.json`을 저장소에 커밋할지(현재 그렇게 둠) / CI에서 생성할지 결정.
-- [ ] 인쇄 PDF 자동 생성(`node scripts/make_pdf.js`는 옛 구조 기준).
+- [x] (2026-10-07 완료) **GitHub Actions**(`.github/workflows/build.yml`)가 옛 Jekyll 구조(`scripts/build_publications.py`)를 가정함. 새 정적 사이트용으로 교체 필요(Jekyll 빌드 제거, `python3 scripts/build_data.py` 실행 후 루트 그대로 Pages 배포, 필요하면 PDF 단계 유지).
+- [x] `data/cv.json`은 커밋해 두고 CI에서도 다시 생성함. (결정 완료) `data/cv.json`을 저장소에 커밋할지(현재 그렇게 둠) / CI에서 생성할지 결정.
+- [x] (2026-10-07 완료) 인쇄 PDF 자동 생성은 `scripts/make_pdf.sh`로 대체.
 - [ ] 미커밋 상태 정리: `archive/` 이동분(스테이징됨), `design/`, `docs/`, `cv-data/`, 새 사이트 파일. 한 번에 커밋하기 전에 구분해서 나눠 커밋 권장.
 - [ ] 배경 파일: `cv-data/patents_260714*.yml`, `patents_add.yml` 백업 정리 여부(이전 인수인계 문서).
 - [ ] 폴더명 `claude-design_v2`, `claude-design_v3` 보관 여부 결정(용량 작음, 비교용).
@@ -32,4 +32,4 @@
 ## 특허 데이터 후속 (2026-10-07)
 - [x] (2026-10-07 완료) `inventors_ko`의 영문 이름 18건을 한글로 교정(이태우·민성용·김태식·서문도·문현수·안교한).
 - [ ] 한글 특허명이 없는 국제 특허 67건(`title_ko: ""`), 영문명이 없는 5건(`title_en: ""`): CV docx에 해당 언어 표기가 없어 비워 둠(임의 번역 금지 원칙). 같은 패밀리의 국내 출원 한글명을 연결할지는 별도 결정 필요.
-- [x] (2026-10-07 완료) 한글 폰트: 나눔고딕(400/700) 자체 내장(`assets/fonts/`, 2MB/184조각, 필요한 조각만 로드). 라틴은 IBM Plex Sans, 한글은 나눔고딕. IBM Plex Sans는 아직 구글 폰트 CDN 사용 — 필요하면 같은 방식으로 자체 내장.
+- [x] (2026-10-07 완료) 한글 폰트: 나눔고딕(400/700) 자체 내장(`assets/fonts/`, 2MB/184조각, 필요한 조각만 로드). 라틴은 IBM Plex Sans, 한글은 나눔고딕. IBM Plex Sans도 자체 내장 완료.

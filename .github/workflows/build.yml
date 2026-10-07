@@ -1,4 +1,4 @@
-name: Build CV (Pages + PDF, KO/EN)
+name: Build & deploy CV (site + PDF)
 
 on:
   push:
@@ -20,41 +20,25 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      # 1) 논문/특허 카운트 자동 계산 → index.html, en.html 갱신
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
       - run: pip install pyyaml
-      - name: Auto-count publications & patents (KO/EN)
-        run: python scripts/build_publications.py
 
-      # 2) Jekyll 빌드
-      - uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: "3.2"
-          bundler-cache: true
-      - name: Build site
-        run: bundle exec jekyll build
-        env:
-          JEKYLL_ENV: production
+      # cv-data/*.yml -> data/cv.json (counts auto-computed), then print the page to
+      # assets/cv.pdf with the runner's Chrome. Runs on every push, so the PDF on the
+      # site always matches the YAML data.
+      - name: Build data and PDF
+        run: scripts/make_pdf.sh
 
-      # 3) GitHub Pages 배포 준비
+      - name: Assemble site
+        run: |
+          mkdir _site
+          cp -r index.html assets data _site/
+
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site
-
-      # 4) PDF 생성 — 국문/영문 각각
-      - name: Install Puppeteer
-        run: npm install puppeteer
-      - name: Generate PDFs (KO + EN)
-        run: node scripts/make_pdf.js
-      - name: Upload PDF artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          name: cv-pdf
-          path: |
-            cv-ko.pdf
-            cv-en.pdf
 
   deploy:
     needs: build

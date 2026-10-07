@@ -110,7 +110,11 @@ ol.items { list-style: none; margin: 0; padding: 0; }
 }
 
 /* print: A4, continuous pages, everything expanded */
-@page { size: A4 portrait; margin: 18mm; }
+@page {
+  size: A4 portrait; margin: 18mm 18mm 20mm;
+  @bottom-left { content: "Sung-Yong Min — CV"; font: 400 9pt 'IBM Plex Sans', 'Nanum Gothic', sans-serif; color: #333; }
+  @bottom-right { content: counter(page) "/" counter(pages); font: 400 9pt 'IBM Plex Sans', 'Nanum Gothic', sans-serif; color: #333; }
+}
 @media print {
   :root, :root[data-theme] {
     --ink: #000; --body: #000; --muted: #333; --rule: #bbb; --rule-year: #777; --bg: #fff; --ph: #eee;
@@ -121,10 +125,10 @@ ol.items { list-style: none; margin: 0; padding: 0; }
   html { scroll-padding-top: 0; }
   .page { max-width: none; padding: 0; }
   .head { grid-template-columns: auto minmax(0, 1fr); }
-  .photo { width: 6.5rem; height: 6.5rem; grid-row: 1 / span 2; align-self: start; }
+  .photo { width: 11rem; height: 11rem; grid-row: 1 / span 2; align-self: start; }
   .id { grid-column: 2; grid-row: 1; align-self: end; }
   .contact { grid-row: 2; grid-column: 2; text-align: left; }
-  .listnav, .back, .toggle, .group-foot, .jump a { display: none !important; }
+  .listnav, .back, .toggle, .group-foot, .jump a, .cv-dl { display: none !important; }
   .jump { grid-template-columns: minmax(0, 1fr) 56px 140px; }
   .extra[hidden] { display: grid !important; }
   .sec { display: flex; padding: 14px 0; }
