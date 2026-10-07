@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<script src="cv-data.js"></script>
+<script src="image-slot.js"></script>
+</helmet>
+<sc-if value="{{ready}}" hint-placeholder-val="{{false}}">
+<div lang="en" style="font-family:'Source Sans 3',system-ui,-apple-system,'Segoe UI',sans-serif;font-size:1rem;line-height:1.55;color:#454b54;background:#ffffff;">
+<div style="max-width:47.5rem;margin:0 auto;padding:{{pad}};">
+<sc-if value="{{showMain}}" hint-placeholder-val="{{true}}">
+  <header style="display:flex;align-items:center;flex-wrap:wrap;gap:20px 36px;padding-bottom:28px;border-bottom:1px solid #1b1e23;">
+    <image-slot id="{{photoId}}" shape="circle" placeholder="Photo" src="{{photoSrc}}" fit="cover" role="img" aria-label="{{p.photoAlt}}" style="width:{{photoSize}};height:{{photoSize}};flex:none;border:6px solid #f2f4f7;border-radius:50%;"></image-slot>
+    <div style="display:flex;flex-direction:column;gap:8px;min-width:0;flex:1 1 18rem;">
+    <h1 style="font-family:Poppins,system-ui,sans-serif;font-size:{{nameSize}};font-weight:600;letter-spacing:-0.01em;line-height:1.1;color:#1b1e23;margin:0;">{{p.name}}</h1>
+    <div style="font-size:1.1875rem;color:#1b1e23;">{{p.title}}, {{p.org}}</div>
+    <div style="display:flex;flex-wrap:wrap;gap:4px 20px;color:#6b717b;">
+      <span>{{p.degree}}</span>
+      <a href="mailto:{{p.email}}" style="color:#2f5f9e;text-decoration:underline;text-underline-offset:3px;" style-focus="outline:2px solid #3b6fb6;outline-offset:2px;">{{p.email}}</a>
+    </div>
+    </div>
+  </header>
+  <sc-if value="{{screen}}" hint-placeholder-val="{{true}}">
+    <nav aria-label="{{L.sections}}" style="display:flex;flex-wrap:wrap;gap:6px 18px;padding:12px 0;border-bottom:1px solid #dfe2e6;font-size:0.875rem;">
+      <sc-for list="{{nav}}" as="n" hint-placeholder-count="8">
+        <a href="{{n.href}}" style="color:#454b54;text-decoration:none;" style-hover="color:#2f5f9e;text-decoration:underline;" style-focus="outline:2px solid #3b6fb6;outline-offset:2px;">{{n.label}}</a>
+      </sc-for>
+    </nav>
+  </sc-if>
+  <section id="{{ids.profile}}" style="margin-top:44px;">
+    <h2 style="font-family:Poppins,system-ui,sans-serif;font-size:{{h2fs}};font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#1b1e23;margin:0 0 16px;padding-bottom:8px;border-bottom:1px solid #dfe2e6;break-after:avoid;">{{L.profile}}</h2>
+    <p style="margin:0;max-width:68ch;text-wrap:pretty;">{{profile}}</p>
+  </section>
+  <section id="{{ids.summary}}" style="margin-top:44px;">
+    <h2 style="font-family:Poppins,system-ui,sans-serif;font-size:{{h2fs}};font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#1b1e23;margin:0 0 20px;padding-bottom:8px;border-bottom:1px solid #dfe2e6;break-after:avoid;">{{L.summary}}</h2>
+    <div style="display:grid;grid-template-columns:{{metricCols}};gap:20px 16px;">
+      <sc-for list="{{metrics}}" as="m" hint-placeholder-count="4">
+        <div style="display:flex;flex-direction:column;gap:2px;">
+          <span style="font-family:Poppins,system-ui,sans-serif;font-size:2.375rem;font-weight:600;line-height:1.1;color:#1b1e23;font-variant-numeric:tabular-nums;">{{m.value}}</span>
+          <span style="font-size:0.875rem;letter-spacing:0.06em;text-transform:uppercase;color:#5b616b;">{{m.label}}</span>
+        </div>
+      </sc-for>
+    </div>
+    <ul style="list-style:none;margin:28px 0 0;padding:0;border-top:1px solid #1b1e23;">
+      <sc-for list="{{jumps}}" as="j" hint-placeholder-count="4">
+        <li style="border-bottom:1px solid #dfe2e6;">
+          <a href="{{j.href}}" style="display:flex;align-items:baseline;gap:14px;padding:11px 0;color:#1b1e23;text-decoration:none;" style-hover="color:#2f5f9e;" style-focus="outline:2px solid #3b6fb6;outline-offset:2px;">
+            <span style="font-size:0.875rem;color:#5b616b;font-variant-numeric:tabular-nums;">{{j.num}}</span>
+            <span style="font-weight:600;">{{j.label}}</span>
+            <span aria-hidden="true" style="flex:1;border-bottom:1px dotted #b9bec5;transform:translateY(-5px);"></span>
+            <span style="font-variant-numeric:tabular-nums;">{{j.count}}</span>
+            <span aria-hidden="true" style="width:16px;color:#2f5f9e;">{{arrow}}</span>
+          </a>
+        </li>
+      </sc-for>
+    </ul>
+  </section>
+  <sc-for list="{{sections}}" as="s" hint-placeholder-count="6">
+    <section id="{{s.id}}" style="margin-top:44px;">
+      <h2 style="font-family:Poppins,system-ui,sans-serif;font-size:{{h2fs}};font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#1b1e23;margin:0 0 18px;padding-bottom:8px;border-bottom:1px solid #dfe2e6;break-after:avoid;">{{s.label}}</h2>
+      <sc-if value="{{s.isEntries}}">
+        <div style="display:flex;flex-direction:column;gap:22px;">
+          <sc-for list="{{s.entries}}" as="e">
+            <article style="display:flex;flex-direction:column;gap:2px;break-inside:avoid;">
+              <div style="display:flex;justify-content:space-between;align-items:baseline;gap:4px 16px;flex-wrap:wrap;">
+                <h3 style="font-family:Poppins,system-ui,sans-serif;font-size:1.0625rem;font-weight:600;color:#1b1e23;margin:0;">{{e.title}}</h3>
+                <span style="font-size:0.875rem;font-weight:600;letter-spacing:0.04em;color:#1b1e23;font-variant-numeric:tabular-nums;">{{e.period}}</span>
+              </div>
+              <div style="color:#6b717b;">{{e.sub}}</div>
+              <ul style="margin:4px 0 0;padding-left:18px;display:flex;flex-direction:column;gap:2px;">
+                <sc-for list="{{e.bullets}}" as="b"><li>{{b}}</li></sc-for>
+              </ul>
+            </article>
+          </sc-for>
+        </div>
+      </sc-if>
+      <sc-if value="{{s.isTags}}">
+        <ul style="margin:0;padding-left:18px;display:grid;grid-template-columns:{{tagCols}};gap:4px 32px;">
+          <sc-for list="{{s.tags}}" as="t"><li>{{t}}</li></sc-for>
+        </ul>
+      </sc-if>
+      <sc-if value="{{s.isRows}}">
+        <div style="display:flex;flex-direction:column;gap:8px;">
+          <sc-for list="{{s.rows}}" as="r">
+            <div style="display:grid;grid-template-columns:{{rowCols}};gap:2px 16px;break-inside:avoid;">
+              <span style="font-weight:600;color:#1b1e23;">{{r.k}}</span>
+              <span>{{r.v}}<sc-if value="{{r.hasSub}}"><span style="color:#6b717b;"> — {{r.sub}}</span></sc-if></span>
+            </div>
+          </sc-for>
+        </div>
+      </sc-if>
+    </section>
+  </sc-for>
+</sc-if>
+<sc-for list="{{blocks}}" as="bl" hint-placeholder-count="2">
+  <section id="{{bl.id}}" style="margin-top:44px;">
+    <h2 style="font-family:Poppins,system-ui,sans-serif;font-size:{{h2fs}};font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:#1b1e23;margin:0;padding-bottom:8px;border-bottom:1px solid #dfe2e6;break-after:avoid;">{{bl.label}}</h2>
+    <sc-for list="{{bl.groups}}" as="g">
+      <div style="margin-top:28px;">
+        <div style="display:flex;align-items:baseline;justify-content:space-between;gap:12px;border-top:2px solid #1b1e23;padding-top:10px;break-after:avoid;">
+          <h3 id="{{g.anchor}}" style="font-family:Poppins,system-ui,sans-serif;font-size:1.125rem;font-weight:600;color:#1b1e23;margin:0;">{{g.label}}</h3>
+          <span style="font-size:0.875rem;color:#6b717b;font-variant-numeric:tabular-nums;">{{g.countLabel}}</span>
+        </div>
+        <sc-for list="{{g.years}}" as="y">
+          <div style="border-bottom:1px solid #dfe2e6;">
+            <sc-if value="{{y.screen}}">
+              <button type="button" onClick="{{y.toggle}}" aria-expanded="{{y.open}}" style="width:100%;display:flex;justify-content:space-between;align-items:center;padding:10px 0;background:none;border:0;font:inherit;color:#1b1e23;cursor:pointer;text-align:left;" style-hover="color:#2f5f9e;" style-focus="outline:2px solid #3b6fb6;outline-offset:2px;">
+                <span style="font-family:Poppins,system-ui,sans-serif;font-weight:600;font-size:1rem;font-variant-numeric:tabular-nums;">{{y.year}}</span>
+                <span style="display:flex;gap:12px;align-items:center;font-size:0.875rem;color:#6b717b;"><span>{{y.countText}}</span><span aria-hidden="true" style="width:14px;text-align:center;font-size:1.125rem;color:#1b1e23;">{{y.chev}}</span></span>
+              </button>
+            </sc-if>
+            <sc-if value="{{y.print}}">
+              <div style="font-family:Poppins,system-ui,sans-serif;font-weight:600;font-size:0.9375rem;color:#1b1e23;padding:12px 0 6px;break-after:avoid;">{{y.year}}</div>
+            </sc-if>
+            <sc-if value="{{y.open}}">
+              <ol style="list-style:none;margin:0;padding:2px 0 16px;display:flex;flex-direction:column;gap:14px;">
+                <sc-for list="{{y.items}}" as="it">
+                  <li style="display:grid;grid-template-columns:36px minmax(0,1fr);gap:4px;break-inside:avoid;">
+                    <span style="font-size:0.875rem;color:#6b717b;padding-top:2px;font-variant-numeric:tabular-nums;">{{it.n}}.</span>
+                    <div style="display:flex;flex-direction:column;gap:2px;max-width:75ch;line-height:1.45;">
+                      <div style="font-weight:600;color:#1b1e23;line-height:1.4;text-wrap:pretty;">{{it.title}}</div>
+                      <div><sc-for list="{{it.people}}" as="a"><sc-if value="{{a.self}}"><strong style="font-weight:700;color:#1b1e23;">{{a.name}}</strong></sc-if><sc-if value="{{a.other}}"><span>{{a.name}}</span></sc-if><span>{{a.sep}}</span></sc-for></div>
+                      <div style="display:flex;flex-wrap:wrap;align-items:center;gap:4px 10px;font-size:0.9375rem;color:#5b616b;">
+                        <span>{{it.meta}}</span>
+                        <sc-if value="{{it.hasDoi}}"><a href="{{it.doiUrl}}" style="color:#2f5f9e;" style-focus="outline:2px solid #3b6fb6;outline-offset:2px;">doi:{{it.doi}}</a></sc-if>
+                        <sc-for list="{{it.badges}}" as="bd"><span style="font-size:0.875rem;line-height:1.5;font-weight:{{bd.weight}};padding:0 7px;border-radius:3px;border:1px solid {{bd.border}};background:{{bd.bg}};color:{{bd.fg}};">{{bd.label}}</span></sc-for>
+                      </div>
+                    </div>
+                  </li>
+                </sc-for>
+              </ol>
+            </sc-if>
+          </div>
+        </sc-for>
+        <sc-if value="{{g.screen}}">
+          <a href="{{summaryHref}}" style="display:inline-flex;gap:6px;margin-top:10px;font-size:0.875rem;color:#2f5f9e;text-decoration:none;" style-hover="text-decoration:underline;" style-focus="outline:2px solid #3b6fb6;outline-offset:2px;">↑ {{L.back}}</a>
+        </sc-if>
+      </div>
+    </sc-for>
+  </section>
+</sc-for>
+</div>
+</div>
+</sc-if>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:900},&quot;mode&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;desktop&quot;,&quot;mobile&quot;,&quot;print1&quot;,&quot;print2&quot;],&quot;default&quot;:&quot;desktop&quot;,&quot;tsType&quot;:&quot;'desktop'|'mobile'|'print1'|'print2'&quot;},&quot;idPrefix&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  state = { open: {} };
+  componentDidMount() {
+    const go = () => window.CV.onPhoto(src => this.setState({ photoSrc: src }));
+    if (window.CV) go(); else this.t = setInterval(() => { if (window.CV) { clearInterval(this.t); go(); this.forceUpdate(); } }, 50);
+  }
+  componentWillUnmount() { clearInterval(this.t); }
+  renderVals() {
+    const CV = window.CV; if (!CV) return { ready: false };
+    const mode = this.props.mode ?? 'desktop';
+    const print = mode.startsWith('print'), mobile = mode === 'mobile', screen = !print;
+    const v = CV.view({ idp: this.props.idPrefix ?? '', print });
+    const open = this.state.open;
+    const blocks = v.blocks.map(b => ({ ...b, groups: b.groups.map(g => {
+      const ys = [...new Set(g.items.map(i => i.year))].sort((a, b) => b - a);
+      return { ...g, screen, years: ys.map((y, yi) => {
+        const k = g.key + ':' + y, isOpen = print || (open[k] ?? yi === 0);
+        const items = g.items.filter(i => i.year === y);
+        return { year: String(y), items, open: isOpen, screen, print, chev: isOpen ? '−' : '+',
+          countText: items.length + ' ' + (items.length > 1 ? g.unitPl : g.unit),
+          toggle: () => this.setState(s => ({ open: { ...s.open, [k]: !isOpen } })) };
+      }) };
+    }) }));
+    return { ready: true, photoSrc: this.state.photoSrc || '', ...v, blocks, screen, print, showMain: mode !== 'print2', arrow: print ? '' : '→',
+      pad: print ? '0' : mobile ? '32px 20px 56px' : '64px 40px 96px', nameSize: mobile ? '2.125rem' : '2.875rem', h2fs: print ? '1.25rem' : '1.375rem',
+      photoSize: print ? '7rem' : mobile ? '7.5rem' : '9.5rem', photoId: (this.props.idPrefix ?? '') + 'photo',
+      metricCols: mobile ? 'repeat(2,minmax(0,1fr))' : 'repeat(4,minmax(0,1fr))',
+      tagCols: mobile ? '1fr' : 'repeat(2,minmax(0,1fr))', rowCols: mobile ? '1fr' : '160px minmax(0,1fr)' };
+  }
+}
+</script>
+</body>
+</html>

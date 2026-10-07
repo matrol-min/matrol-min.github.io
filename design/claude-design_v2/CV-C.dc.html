@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="cv-data.js"></script>
+<script src="image-slot.js"></script>
+</helmet>
+<sc-if value="{{ready}}" hint-placeholder-val="{{false}}">
+<div lang="en" style="font-family:'IBM Plex Sans',system-ui,-apple-system,'Segoe UI',sans-serif;font-size:1rem;line-height:1.55;color:#454b54;background:#ffffff;">
+<div style="max-width:1080px;margin:0 auto;padding:{{pad}};">
+<sc-if value="{{showMain}}" hint-placeholder-val="{{true}}">
+  <header style="display:grid;grid-template-columns:{{headCols}};align-items:end;gap:12px 32px;padding-bottom:20px;border-bottom:3px solid #1b1e23;">
+    <image-slot id="{{photoId}}" shape="rounded" radius="4" placeholder="Photo" src="{{photoSrc}}" fit="cover" role="img" aria-label="{{p.photoAlt}}" style="width:{{photoW}};height:{{photoW}};"></image-slot>
+    <div style="display:flex;flex-direction:column;gap:4px;">
+      <h1 style="font-size:{{nameSize}};font-weight:600;line-height:1.05;letter-spacing:-0.02em;color:#1b1e23;margin:0;">{{p.name}}</h1>
+      <div style="font-size:1.125rem;color:#1b1e23;">{{p.title}}</div>
+    </div>
+    <div style="grid-column:{{headRightCol}};display:flex;flex-direction:column;gap:2px;text-align:{{headAlign}};color:#5b616b;">
+      <span>{{p.org}}</span>
+      <span>{{p.degree}}</span>
+      <a href="mailto:{{p.email}}" style="color:#2f5f9e;text-decoration:underline;text-underline-offset:3px;" style-focus="outline:2px solid #3b6fb6;outline-offset:2px;">{{p.email}}</a>
+    </div>
+  </header>
+  <section id="{{ids.profile}}" style="display:grid;grid-template-columns:{{secCols}};gap:{{secGap}};padding:28px 0;border-bottom:1px solid #dfe2e6;">
+    <h2 style="font-size:{{h2fs}};font-weight:600;letter-spacing:-0.005em;line-height:1.25;color:#1b1e23;margin:0;padding-top:2px;break-after:avoid;">{{L.profile}}</h2>
+    <p style="margin:0;max-width:70ch;text-wrap:pretty;">{{profile}}</p>
+  </section>
+  <section id="{{ids.summary}}" style="display:grid;grid-template-columns:{{secCols}};gap:{{secGap}};padding:28px 0;border-bottom:1px solid #dfe2e6;">
+    <h2 style="font-size:{{h2fs}};font-weight:600;letter-spacing:-0.005em;line-height:1.25;color:#1b1e23;margin:0;padding-top:2px;break-after:avoid;">{{L.summary}}</h2>
+    <div style="display:flex;flex-direction:column;gap:20px;min-width:0;">
+      <div style="display:grid;grid-template-columns:{{metricCols}};border-top:1px solid #1b1e23;border-bottom:1px solid #1b1e23;">
+        <sc-for list="{{metrics}}" as="m" hint-placeholder-count="4">
+          <div style="display:flex;flex-direction:column;gap:2px;padding:12px 16px 12px 0;">
+            <span style="font-size:0.875rem;color:#5b616b;">{{m.label}}</span>
+            <span style="font-size:2rem;font-weight:600;line-height:1.15;color:#1b1e23;font-variant-numeric:tabular-nums;">{{m.value}}</span>
+          </div>
+        </sc-for>
+      </div>
+      <div role="table" aria-label="{{L.jump}}" style="display:flex;flex-direction:column;">
+        <sc-for list="{{jumps}}" as="j" hint-placeholder-count="4">
+          <div role="row" style="display:grid;grid-template-columns:minmax(0,1fr) 72px {{jumpCol}};align-items:baseline;gap:12px;padding:9px 0;border-bottom:1px solid #dfe2e6;">
+            <span role="cell" style="color:#1b1e23;font-weight:500;">{{j.label}}</span>
+            <span role="cell" style="text-align:right;font-variant-numeric:tabular-nums;color:#1b1e23;">{{j.count}}</span>
+            <span role="cell" style="text-align:right;">
+              <sc-if value="{{screen}}"><a href="{{j.href}}" style="font-size:0.875rem;font-weight:600;color:#2f5f9e;text-decoration:none;" style-hover="text-decoration:underline;" style-focus="outline:2px solid #3b6fb6;outline-offset:2px;">{{L.jump}} →</a></sc-if>
+            </span>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+  <sc-for list="{{sections}}" as="s" hint-placeholder-count="6">
+    <section id="{{s.id}}" style="display:grid;grid-template-columns:{{secCols}};gap:{{secGap}};padding:28px 0;border-bottom:1px solid #dfe2e6;">
+      <h2 style="font-size:{{h2fs}};font-weight:600;letter-spacing:-0.005em;line-height:1.25;color:#1b1e23;margin:0;padding-top:2px;break-after:avoid;">{{s.label}}</h2>
+      <div style="display:flex;flex-direction:column;gap:18px;min-width:0;">
+        <sc-if value="{{s.isEntries}}">
+          <sc-for list="{{s.entries}}" as="e">
+            <article style="display:grid;grid-template-columns:{{rowCols}};gap:2px 20px;break-inside:avoid;">
+              <span style="font-size:0.875rem;color:#5b616b;padding-top:1px;font-variant-numeric:tabular-nums;">{{e.period}}</span>
+              <div style="display:flex;flex-direction:column;gap:2px;">
+                <h3 style="font-size:1rem;font-weight:600;color:#1b1e23;margin:0;">{{e.title}}</h3>
+                <div style="color:#5b616b;">{{e.sub}}</div>
+                <ul style="margin:4px 0 0;padding-left:18px;display:flex;flex-direction:column;gap:2px;">
+                  <sc-for list="{{e.bullets}}" as="b"><li>{{b}}</li></sc-for>
+                </ul>
+              </div>
+            </article>
+          </sc-for>
+        </sc-if>
+        <sc-if value="{{s.isTags}}">
+          <p style="margin:0;color:#1b1e23;">{{s.tagLine}}</p>
+        </sc-if>
+        <sc-if value="{{s.isRows}}">
+          <sc-for list="{{s.rows}}" as="r">
+            <div style="display:grid;grid-template-columns:{{rowCols}};gap:2px 20px;break-inside:avoid;margin-top:-8px;">
+              <span style="font-size:0.875rem;color:#5b616b;padding-top:1px;font-variant-numeric:tabular-nums;">{{r.k}}</span>
+              <span style="color:#1b1e23;">{{r.v}}<sc-if value="{{r.hasSub}}"><span style="color:#5b616b;">, {{r.sub}}</span></sc-if></span>
+            </div>
+          </sc-for>
+        </sc-if>
+      </div>
+    </section>
+  </sc-for>
+</sc-if>
+<sc-for list="{{blocks}}" as="bl" hint-placeholder-count="2">
+  <section id="{{bl.id}}" style="display:grid;grid-template-columns:{{secCols}};gap:{{secGap}};padding:28px 0;border-bottom:1px solid #dfe2e6;">
+    <h2 style="font-size:{{h2fs}};font-weight:600;letter-spacing:-0.005em;line-height:1.25;color:#1b1e23;margin:0;padding-top:2px;break-after:avoid;">{{bl.label}}</h2>
+    <div style="display:flex;flex-direction:column;gap:32px;min-width:0;">
+      <sc-for list="{{bl.groups}}" as="g">
+        <div style="display:flex;flex-direction:column;">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:8px 0;border-top:2px solid #1b1e23;border-bottom:1px solid #1b1e23;break-after:avoid;">
+            <h3 id="{{g.anchor}}" style="font-size:1.0625rem;font-weight:600;color:#1b1e23;margin:0;">{{g.label}}</h3>
+            <span style="font-size:0.875rem;color:#454b54;font-variant-numeric:tabular-nums;">{{g.countLabel}}</span>
+          </div>
+          <ol style="list-style:none;margin:0;padding:0;">
+            <sc-for list="{{g.shown}}" as="it">
+              <li style="display:grid;grid-template-columns:{{itemCols}};gap:2px 20px;padding:12px 0;border-bottom:1px solid #dfe2e6;break-inside:avoid;">
+                <span style="font-size:0.875rem;color:#5b616b;padding-top:1px;font-variant-numeric:tabular-nums;">{{it.year}}</span>
+                <span style="font-size:0.875rem;color:#8a8f96;padding-top:1px;font-variant-numeric:tabular-nums;">[{{it.n}}]</span>
+                <div style="display:flex;flex-direction:column;gap:2px;min-width:0;max-width:75ch;line-height:1.45;">
+                  <div style="font-weight:600;color:#1b1e23;line-height:1.4;text-wrap:pretty;">{{it.title}}</div>
+                  <div><sc-for list="{{it.people}}" as="a"><sc-if value="{{a.self}}"><strong style="font-weight:700;color:#1b1e23;">{{a.name}}</strong></sc-if><sc-if value="{{a.other}}"><span>{{a.name}}</span></sc-if><span>{{a.sep}}</span></sc-for></div>
+                  <div style="display:flex;flex-wrap:wrap;align-items:center;gap:4px 10px;font-size:0.9375rem;color:#5b616b;">
+                    <span>{{it.meta}}</span>
+                    <sc-if value="{{it.hasDoi}}"><a href="{{it.doiUrl}}" style="color:#2f5f9e;" style-focus="outline:2px solid #3b6fb6;outline-offset:2px;">doi:{{it.doi}}</a></sc-if>
+                    <sc-for list="{{it.badges}}" as="bd"><span style="font-size:0.875rem;line-height:1.5;font-weight:{{bd.weight}};padding:0 6px;border:1px solid {{bd.border}};background:{{bd.bg}};color:{{bd.fg}};">{{bd.label}}</span></sc-for>
+                  </div>
+                </div>
+              </li>
+            </sc-for>
+          </ol>
+          <sc-if value="{{g.screen}}">
+            <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;padding-top:10px;flex-wrap:wrap;">
+              <sc-if value="{{g.hasMore}}">
+                <button type="button" onClick="{{g.toggle}}" aria-expanded="{{g.expanded}}" style="font:inherit;font-size:0.875rem;font-weight:600;color:#2f5f9e;background:none;border:0;padding:4px 0;cursor:pointer;text-decoration:underline;text-underline-offset:3px;" style-focus="outline:2px solid #3b6fb6;outline-offset:2px;">{{g.btnText}}</button>
+              </sc-if>
+              <a href="{{summaryHref}}" style="font-size:0.875rem;color:#2f5f9e;text-decoration:none;margin-left:auto;" style-hover="text-decoration:underline;" style-focus="outline:2px solid #3b6fb6;outline-offset:2px;">↑ {{L.back}}</a>
+            </div>
+          </sc-if>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+</sc-for>
+</div>
+</div>
+</sc-if>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:900},&quot;mode&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;desktop&quot;,&quot;mobile&quot;,&quot;print1&quot;,&quot;print2&quot;],&quot;default&quot;:&quot;desktop&quot;,&quot;tsType&quot;:&quot;'desktop'|'mobile'|'print1'|'print2'&quot;},&quot;idPrefix&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  state = { expanded: {} };
+  componentDidMount() {
+    const go = () => window.CV.onPhoto(src => this.setState({ photoSrc: src }));
+    if (window.CV) go(); else this.t = setInterval(() => { if (window.CV) { clearInterval(this.t); go(); this.forceUpdate(); } }, 50);
+  }
+  componentWillUnmount() { clearInterval(this.t); }
+  renderVals() {
+    const CV = window.CV; if (!CV) return { ready: false };
+    const mode = this.props.mode ?? 'desktop';
+    const print = mode.startsWith('print'), mobile = mode === 'mobile', screen = !print;
+    const v = CV.view({ idp: this.props.idPrefix ?? '', print });
+    const LIMIT = 3;
+    const blocks = v.blocks.map(b => ({ ...b, groups: b.groups.map(g => {
+      const ex = !!this.state.expanded[g.key], rest = g.items.length - LIMIT;
+      return { ...g, screen, expanded: ex, hasMore: rest > 0,
+        shown: print || ex ? g.items : g.items.slice(0, LIMIT),
+        btnText: ex ? v.L.showLess : `+ ${rest} more`,
+        toggle: () => this.setState(s => ({ expanded: { ...s.expanded, [g.key]: !ex } })) };
+    }) }));
+    const sections = v.sections.map(s => ({ ...s, tagLine: s.isTags ? s.tags.join('  ·  ') : '' }));
+    return { ready: true, photoSrc: this.state.photoSrc || '', ...v, sections, blocks, screen, showMain: mode !== 'print2',
+      pad: print ? '0' : mobile ? '32px 20px 56px' : '64px 48px 96px',
+      nameSize: mobile ? '2.125rem' : print ? '2.375rem' : '3rem',
+      headCols: mobile ? '1fr' : print ? 'auto minmax(0,1fr)' : 'auto minmax(0,1fr) auto', headRightCol: print ? '2' : 'auto', h2fs: print ? '1.25rem' : '1.375rem',
+      photoW: print ? '6.5rem' : mobile ? '6.5rem' : '9rem', photoId: (this.props.idPrefix ?? '') + 'photo', headAlign: mobile || print ? 'left' : 'right',
+      secCols: mobile ? 'minmax(0,1fr)' : print ? '128px minmax(0,1fr)' : '200px minmax(0,1fr)',
+      secGap: mobile ? '14px' : print ? '20px' : '32px',
+      rowCols: mobile ? '1fr' : print ? '104px minmax(0,1fr)' : '132px minmax(0,1fr)',
+      itemCols: mobile ? '44px 32px minmax(0,1fr)' : '52px 36px minmax(0,1fr)',
+      metricCols: mobile ? 'repeat(2,minmax(0,1fr))' : 'repeat(4,minmax(0,1fr))',
+      jumpCol: print ? '0px' : '110px' };
+  }
+}
+</script>
+</body>
+</html>

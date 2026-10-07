@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<script src="cv-data.js"></script>
+<style>body{margin:0;background:#e9ecf0;} a{color:#2f5f9e;} a:hover{color:#234a7d;}</style>
+</helmet>
+<section data-screen-label="Turn 2" style="padding:72px 72px 0;display:flex;flex-direction:column;gap:48px;font-family:'Source Sans 3',system-ui,sans-serif;color:#1b1e23;">
+  <div id="2a" data-screen-label="2a Final — C v3" style="display:flex;flex-direction:column;gap:24px;">
+    <div style="display:flex;align-items:baseline;gap:16px;flex-wrap:wrap;">
+      <span style="font-size:1.125rem;font-weight:700;background:#2f5f9e;color:#ffffff;padding:4px 12px;border-radius:4px;">2a</span>
+      <h2 style="margin:0;font-size:1.75rem;font-weight:700;">Final — Date-column rows (v3)</h2>
+      <span style="font-size:1.125rem;color:#454b54;">기준안 C 수정본. YAML 표기 통일(번호 열 제거, role/status 배지), B의 sticky 점프 바, A의 연도 구분.</span>
+    </div>
+    <div style="display:flex;gap:56px;align-items:flex-start;">
+      <figure style="margin:0;display:flex;flex-direction:column;gap:10px;">
+        <figcaption style="font-size:0.875rem;color:#5b616b;">Desktop · 1280</figcaption>
+        <div id="shot-desktop" style="width:1280px;background:#ffffff;box-shadow:0 1px 3px rgba(0,0,0,0.08),0 12px 32px rgba(0,0,0,0.06);"><dc-import name="CV-C" mode="desktop" id-prefix="2a-d-" hint-size="100%,2400px"></dc-import></div>
+      </figure>
+      <figure style="margin:0;display:flex;flex-direction:column;gap:10px;">
+        <figcaption style="font-size:0.875rem;color:#5b616b;">Mobile · 400 (스크롤 — 목록 구간에서 점프 바 고정)</figcaption>
+        <div id="shot-mobile" style="width:400px;height:1600px;overflow-y:auto;background:#ffffff;box-shadow:0 1px 3px rgba(0,0,0,0.08),0 12px 32px rgba(0,0,0,0.06);"><dc-import name="CV-C" mode="mobile" id-prefix="2a-m-" hint-size="100%,1600px"></dc-import></div>
+      </figure>
+      <figure style="margin:0;display:flex;flex-direction:column;gap:10px;">
+        <figcaption style="font-size:0.875rem;color:#5b616b;">Print · A4 page 1 (여백 18mm)</figcaption>
+        <div id="shot-print1" style="position:relative;width:794px;height:1123px;box-sizing:border-box;padding:68px 68px 72px;overflow:hidden;background:#ffffff;box-shadow:0 1px 3px rgba(0,0,0,0.08),0 12px 32px rgba(0,0,0,0.06);">
+          <div style="height:100%;overflow:hidden;"><dc-import name="CV-C" mode="print1" id-prefix="2a-p1-" hint-size="100%,983px"></dc-import></div>
+          <span style="position:absolute;bottom:30px;left:68px;right:68px;display:flex;justify-content:space-between;font-size:0.75rem;color:#5b616b;"><span>Sung-Yong Min — CV</span><span>1</span></span>
+        </div>
+      </figure>
+      <figure style="margin:0;display:flex;flex-direction:column;gap:10px;">
+        <figcaption style="font-size:0.875rem;color:#5b616b;">Print · A4 list page (모든 항목 펼침)</figcaption>
+        <div id="shot-print2" style="position:relative;width:794px;height:1123px;box-sizing:border-box;padding:68px 68px 72px;overflow:hidden;background:#ffffff;box-shadow:0 1px 3px rgba(0,0,0,0.08),0 12px 32px rgba(0,0,0,0.06);">
+          <div style="height:100%;overflow:hidden;"><dc-import name="CV-C" mode="print2" id-prefix="2a-p2-" hint-size="100%,983px"></dc-import></div>
+          <span style="position:absolute;bottom:30px;left:68px;right:68px;display:flex;justify-content:space-between;font-size:0.75rem;color:#5b616b;"><span>Sung-Yong Min — CV</span><span>3</span></span>
+        </div>
+      </figure>
+    </div>
+  </div>
+</section>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {}
+</script>
+</body>
+</html>
