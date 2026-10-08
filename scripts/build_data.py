@@ -100,7 +100,7 @@ data = {
                    "bullets": [e["description"].strip()] if e.get("description") else []} for e in edu],
     "interests": bullets(sections["Research Interests"]["content"]),
     "projects": [{"period": e["caption"], "title": e["title"], "sub": e["sub_title"], "bullets": []} for e in proj],
-    "skills": bullets(sections["Technical Skills"]["content"]),
+    "skills": sections["Technical Skills"]["content"],
     "awards": [{"k": a["caption"], "v": a["title"], "sub": a.get("sub_title", "")} for a in awards],
     "papers": papers,
     "patents": patents,

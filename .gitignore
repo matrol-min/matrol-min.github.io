@@ -28,3 +28,6 @@ data/cv.json
 
 # Archived v1 Jekyll site: new/untracked files in here are ignored
 archive/
+
+# Design references / Claude Design handoffs: local only
+design/

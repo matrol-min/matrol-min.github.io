@@ -38,6 +38,7 @@ h2 { margin: 0; padding-top: 2px; font-size: var(--fs-h2); font-weight: 600; let
 .sec-body p { margin: 0; max-width: 70ch; text-wrap: pretty; }
 .entry { display: grid; grid-template-columns: var(--row-cols); gap: 2px 20px; break-inside: avoid; }
 .date { font-size: var(--fs-min); color: var(--muted); padding-top: 1px; }
+.date.grp { font-weight: 600; color: var(--ink); }
 .entry-main { display: flex; flex-direction: column; gap: 2px; }
 h3 { margin: 0; font-size: 1rem; font-weight: 600; color: var(--ink); }
 .sub { color: var(--muted); }

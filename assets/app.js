@@ -91,7 +91,9 @@
       sec('education', L.education, entries(D.education)) +
       sec('interests', L.interests, '<ul class="plain-list cols">' + D.interests.map(function (s) { return '<li>' + esc(s) + '</li>'; }).join('') + '</ul>') +
       sec('projects', L.projects, entries(D.projects)) +
-      sec('skills', L.skills, '<ul class="plain-list">' + D.skills.map(function (s) { return '<li>' + esc(s) + '</li>'; }).join('') + '</ul>') +
+      sec('skills', L.skills, D.skills.map(function (g) {
+        return '<article class="entry"><span class="date grp">' + esc(g.group) + '</span><ul class="plain-list">' + g.items.map(function (i) { return '<li>' + esc(i) + '</li>'; }).join('') + '</ul></article>';
+      }).join('')) +
       sec('awards', L.awards, D.awards.map(function (a) {
         return '<div class="entry award"><span class="date">' + esc(a.k) + '</span><span class="award-v">' + esc(a.v) +
           (a.sub ? '<span class="sub">, ' + esc(a.sub) + '</span>' : '') + '</span></div>';

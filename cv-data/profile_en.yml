@@ -108,32 +108,28 @@ sections:
     sub_title: Ministry of Education, Science and Technology, Republic of Korea
     caption: 2009. 3−2011. 8
 - title: Technical Skills
-  layout: text
-  content: '- Materials science background
-
+  layout: groups
+  content:
+  - group: Background
+    items:
+    - Materials science background
     - Organic electronics background
-
+  - group: Process
+    items:
     - Electrohydrodynamic nanowire printing technique
-
     - Micro- & Nano-scale lithography
-
-    - Electronic devices fabrication & characterization (Transistors, Circuits)
-
     - Micro LED Display fabrication (Large-area bonding, Defect repair) & failure analysis
-
-    - Bonding Process: Flip-Chip Bonding, ACF Bonding, Eutectic Bonding, Solder Bonding
-
-    - Microstructural characterization (SEM, TEM, FIB, and AFM)
-
-    - Electrical Reliability Characterization
-
+    - 'Bonding Process: Flip-Chip Bonding, ACF Bonding, Eutectic Bonding, Solder Bonding'
     - Process Quality Control / Mass Production Support
-
+  - group: Characterization
+    items:
+    - Electronic devices fabrication & characterization (Transistors, Circuits)
+    - Microstructural characterization (SEM, TEM, FIB, and AFM)
+    - Electrical Reliability Characterization
+  - group: Tools
+    items:
     - Basic 3D modeling (AutoCAD, Solidworks, Blender)
-
     - Basic computer programming languages (C, Python)
-
-    '
 - title: Honors and Awards
   layout: list
   content:
