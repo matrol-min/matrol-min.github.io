@@ -10,6 +10,6 @@
 
 새 사이트는 이 파일들을 입력으로 쓴다. 이전 Jekyll 버전은 ../archive/v1-jekyll-theme/ 참고.
 
-사이트 데이터 빌드: `python3 scripts/build_data.py` → `data/cv.json` (건수 자동 집계 포함). yml 수정 후 반드시 재실행.
+사이트 데이터 빌드: `python3 scripts/build_data.py` → `data/cv.json` (건수 자동 집계 포함). 미리보기용이며, 푸시하면 CI가 자동으로 다시 만든다.
 
 이력 업데이트 방법과 터미널 명령어는 루트의 [`README.md`](../README.md)에 있다.

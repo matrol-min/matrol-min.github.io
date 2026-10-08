@@ -7,7 +7,7 @@ https://matrol-min.github.io/ (영문 페이지). 데이터(`cv-data/*.yml`)를 
 | 경로 | 내용 |
 |---|---|
 | `cv-data/` | CV 원본 데이터(yml). **평소에 고치는 곳** |
-| `data/` | 사이트가 읽는 파일. `cv.json`은 `scripts/build_data.py`가 만든다, `labels.en.json`은 화면 문구 |
+| `data/` | 사이트가 읽는 파일. `cv.json`은 자동 생성(git에 올리지 않음), `labels.en.json`은 화면 문구 |
 | `index.html`, `assets/` | 사이트(HTML, CSS, JS, 폰트, 사진) |
 | `scripts/build_data.py` | yml → `data/cv.json` (건수 자동 집계) |
 | `scripts/make_pdf.sh` | 사이트를 A4 PDF로 인쇄해 `assets/cv.pdf` 생성(Chrome 필요, CI에서도 사용) |
@@ -50,35 +50,35 @@ main에 푸시하면 GitHub Actions가 건수를 다시 세고 PDF를 새로 만
 
 ## 2. 터미널 명령어 (순서대로)
 
+건수 집계와 PDF 생성은 **푸시하면 GitHub Actions가 자동으로 한다.** 그래서 파일을 고친 뒤 바로 커밋·푸시하면 된다(1~4번만 하면 됨). 화면을 미리 보고 싶을 때만 아래 "미리보기"를 쓴다.
+
 ```bash
-# 0) 프로젝트 폴더로 이동
+# 1) 프로젝트 폴더로 이동
 cd "/Users/syong/Documents/개인 업무/CV/CV_github"
 
-# 1) 파일을 고친 뒤 데이터 다시 만들기 (건수 자동 집계, data/cv.json 갱신)
-python3 scripts/build_data.py
-
-# 2) (선택) 화면 확인: 서버를 켠 뒤 브라우저에서 http://localhost:8765/ 열기. 끝낼 때 Ctrl+C
-python3 -m http.server 8765
-
-# 3) (선택) PDF를 로컬에서 만들어 보기 -> assets/cv.pdf (Chrome 필요, 커밋되지 않음)
-scripts/make_pdf.sh
-
-# 4) 바뀐 내용 확인
+# 2) 바뀐 내용 확인
 git status
 git diff --stat
 
-# 5) 커밋 (cv-data의 yml과 갱신된 data/cv.json을 함께 올린다)
-git add cv-data data
+# 3) 커밋
+git add cv-data
 git commit -m "Update CV: <무엇을 바꿨는지 한 줄>"
 
-# 6) 푸시 -> GitHub Actions가 사이트와 PDF를 자동 갱신
+# 4) 푸시 -> Actions가 건수 집계, PDF 생성, 사이트 배포를 자동으로 한다
 git push origin main
 
-# 7) (선택) 배포 진행 상황 확인
+# 5) (선택) 배포 진행 상황 확인
 gh run list --limit 3
 gh run watch        # 진행 중인 실행을 실시간으로 보기
 ```
 
-- 화면 문구나 디자인 파일(`data/labels.en.json`, `assets/`, `index.html`)도 고쳤다면 5번에서 `git add cv-data data assets index.html`처럼 함께 추가한다.
+### (선택) 푸시 전에 화면 미리보기
+```bash
+python3 scripts/build_data.py        # yml -> data/cv.json (미리보기용. 이 파일은 git에 올라가지 않는다)
+python3 -m http.server 8765          # 브라우저에서 http://localhost:8765/ 열기. 끝낼 때 Ctrl+C
+scripts/make_pdf.sh                  # (선택) PDF도 로컬에서 만들어 보기 -> assets/cv.pdf (Chrome 필요)
+```
+
+- 화면 문구나 디자인 파일(`data/labels.en.json`, `assets/`, `index.html`)도 고쳤다면 3번에서 `git add cv-data data assets index.html`처럼 함께 추가한다.
 - 푸시가 거절되면(원격이 앞서 있을 때) `git pull --rebase origin main` 후 다시 `git push origin main`.
 - 푸시 후 사이트가 안 바뀌어 보이면 브라우저 캐시를 비운다(Safari: `Cmd+Option+E` 후 `Cmd+R`).
