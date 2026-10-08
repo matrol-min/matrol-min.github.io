@@ -1,0 +1,336 @@
+# =====================================================================
+#  학술 발표 데이터 (CV docx 원문 그대로). 항목 추가 시 건수/목록 자동 갱신.
+#  scope: international / domestic
+#  type: Invited / Oral / Poster
+#  venue: 학회명, 장소, 일자 (원문 그대로)
+#  authors의 * 는 교신저자 표기(원문 유지)
+# =====================================================================
+- year: 2015
+  scope: international
+  type: Poster
+  authors: "S.-Y. Min, T.-W. Lee*"
+  title: "Low-temperature Processed Core-Sheath Conducting Nanowires for Flexible All-wire Electronics"
+  venue: "2015 Materials Research Society (MRS) Fall Meeting, Hynes Convention Center, Boston Massachusetts, USA, November 29-December 4, 2015"
+
+- year: 2014
+  scope: international
+  type: Invited
+  authors: "S.-Y. Min, T.-S. Kim, H. Cho, B. J. Kim, Y.-Y. Noh, H. Yang, J. H. Cho, T.-W. Lee*"
+  title: "Large-Scale Controlled Organic Nanowire Electronics"
+  venue: "The International Conference on Small Science (ICSS), Hong Kong, December 8-11, 2014"
+
+- year: 2014
+  scope: international
+  type: Invited
+  authors: "S.-Y. Min, T.-S. Kim, B. J. Kim, Y.-Y. Noh, H. Yang, J. H. Cho, T.-W. Lee*"
+  title: "Organic Nanowire Electronics and Lithography on Large-area"
+  venue: "The 2nd International Union of Materials Research Societies—International Conference of Young Researchers on Advanced Materials (IUMRS-ICYRAM), Hainan International Convention & Exhibition Center, Haikou, China, October 24-29, 2014"
+
+- year: 2014
+  scope: international
+  type: Invited
+  authors: "S.-Y. Min, T.-S. Kim, B. J. Kim, Y.-Y. Noh, H. Yang, J. H. Cho, T.-W. Lee*"
+  title: "Large-area Printed Nanowire Electronics and Lithography"
+  venue: "The 14th International Meeting on Information Display (IMID), EXCO, Daegu, Korea, August 26-29, 2014"
+
+- year: 2014
+  scope: international
+  type: Oral
+  authors: "S.-Y. Min, T.-S. Kim, B. J. Kim, H. Cho, Y.-Y. Noh, H. Yang, J. H. Cho T.-W. Lee*"
+  title: "Large-scale Organic Nanowire Printing, Lithography, and Electronics"
+  venue: "The 25th International Conference Molecular Electronics & Devices (IC-ME&D), Paiknam Academin Information Center, Hanyang University, Korea, May 15-16, 2014"
+
+- year: 2014
+  scope: international
+  type: Invited
+  authors: "S.-Y. Min, T.-S. Kim, B. J. Kim, Y.-Y. Noh, H. Yang, J. H. Cho, T.-W. Lee*"
+  title: "Large-area Controllable Nanowire Printing, Electronics and Lithography"
+  venue: "The 8th International Symposium on Organic Molecular Electronics (ISOME), Tokyo University of Agriculture and Technology, Tokyo, Japan, May 15-16, 2014"
+
+- year: 2013
+  scope: international
+  type: Poster
+  authors: "W. Xu, T.-S. Lim, H.-K. Seo, S.-Y. Min, H. Cho, M.-H. Park, Y.-H. Kim, T.-W. Lee*"
+  title: "N-DMBI-Doped Graphene Field-Effect Transistors with High Electron Mobility and Air-Stability"
+  venue: "MRS Fall 2013, Hynes Convention Center, Boston, Massachusetts, USA, December 1-6, 2013"
+
+- year: 2013
+  scope: international
+  type: Invited
+  authors: "S.-Y. Min, T.-W. Lee*"
+  title: "Large-scale Controlled Organic Nanowire Printing, Lithography, and Electronics"
+  venue: "The 2nd International Conference on Advanced Electromaterials (ICAE), ICC Jeju, Jeju, Korea, November 12-15, 2013"
+
+- year: 2013
+  scope: international
+  type: Poster
+  authors: "Y. Lee, T.-S. Kim, S.-Y. Min, T.-W. Lee*"
+  title: "Highly Aligned Printed Copper Nanofiber Electrode Array"
+  venue: "5th Asian Conference on Organic Electronics (ACOE), POSTECH, Pohang, Korea, November 13-15, 2013"
+
+- year: 2013
+  scope: international
+  type: Poster
+  authors: "T.-S. Kim, S.-Y. Min, T.-W. Lee*"
+  title: "Highly Aligned Polymer Nanofiber Transistors on Self-organized Polymeric Electrodes"
+  venue: "5th Asian Conference on Organic Electronics (ACOE), POSTECH, Pohang, Korea, November 13-15, 2013"
+
+- year: 2013
+  scope: international
+  type: Poster
+  authors: "Y.-H. Kim, T.-H. Han, H. Cho, S.-Y. Min, C.-L. Lee, T.-W. Lee*"
+  title: "Development of Air-Stable Polymer Electron Injection Interlayer for Efficient Inverted Polymer Light-Emitting Diodes"
+  venue: "5th Asian Conference on Organic Electronics (ACOE), POSTECH, Pohang, Korea, November 13-15, 2013"
+
+- year: 2013
+  scope: international
+  type: Poster
+  authors: "H. Cho, S.-H. Jeong, S.-Y. Min, T.-H. Han, M.-H. Park, Y.-H. Kim, T.-W. Lee*"
+  title: "Large-Area Cathode Separation for Organic Light-Emitting Diodes Using Highly-Aligned Polymer Fiber Arrays"
+  venue: "5th Asian Conference on Organic Electronics (ACOE), POSTECH, Pohang, Korea, November 13-15, 2013"
+
+- year: 2013
+  scope: international
+  type: Poster
+  authors: "H. Cho, S.-H. Jeong, T.-H. Han, M. H. Park, Y.-H. Kim, Y. Lee, S.-Y. Min, T.-W. Lee*"
+  title: "Large-Area Patterning of Organic Light-Emitting Diodes Using Highly-Aligned Organic Fibers"
+  venue: "The 13th International Meeting on Information Display (IMID), EXCO, Daegu, Korea, August 26-29, 2013"
+
+- year: 2013
+  scope: international
+  type: Poster
+  authors: "S.-Y. Min, T.-S. Kim, B. J. Kim, H. Cho, Y.-Y. Noh, H. Yang, J. H. Cho, T.-W. Lee*"
+  title: "Large-scale Organic Nanowire Printed Electronics and Lithography"
+  venue: "International Conference on Flexible and Printed Electronics 2013 (ICFPE 2013), The Shilla Hotel, Jeju, Korea, September 11-13, 2013"
+
+- year: 2013
+  scope: international
+  type: Poster
+  authors: "Y. Lee, T.-S. Kim, S.-Y. Min, T.-W. Lee*"
+  title: "Highly Aligned Printed Metallic Nanofiber Electronics"
+  venue: "International Conference on Flexible and Printed Electronics 2013 (ICFPE 2013), The Shilla Hotel, Jeju, Korea, September 11-13, 2013"
+
+- year: 2013
+  scope: international
+  type: Poster
+  authors: "S.-Y. Min, T.-S. Kim, B. J. Kim, H. Cho, Y.-Y. Noh, H. Yang, J. H. Cho, T.-W. Lee*"
+  title: "Large-scale printed organic nanowire electronics"
+  venue: "Korea-Japan Joint Forum (KJF) International Conference on Organic Materials for Electronics and Photonics, Haeundae Grand Hotel, Busan, Korea, August 29-31, 2013"
+
+- year: 2013
+  scope: international
+  type: Invited
+  authors: "S.-Y. Min, T.-S. Kim, B. J. Kim, H. Cho, H. Yang, Y.-Y. Noh, J. H. Cho, T.-W. Lee*"
+  title: "Large-Scale Organic Nanowire Lithography and Electronics"
+  venue: "9th China-Korea Bilateral Symposium on Polymer Materials, Hunan Normal University, Changsha, China, July 14-18, 2013"
+
+- year: 2013
+  scope: international
+  type: Invited
+  authors: "S.-Y. Min, T.-S. Kim, B. J. Kim, H. Cho, H. Yang, Y.-Y. Noh, J. H. Cho, T.-W. Lee*"
+  title: "Large-Scale Organic Nanowire Lithography and Electronics"
+  venue: "The 14th International Conference on the Formation of Semiconductor Interfaces, Hyundai Hotel, Gyeongju, Korea, June 30-July 5, 2013"
+
+- year: 2013
+  scope: international
+  type: Poster
+  authors: "S.-Y. Min, T.-S. Kim, T.-W. Lee*"
+  title: "Large-scale controlled organic nanowire electronics"
+  venue: "The 14th International Conference on the Formation of Semiconductor Interfaces, Hyundai Hotel, Gyeongju, Korea, June 30-July 5, 2013"
+
+- year: 2013
+  scope: international
+  type: Poster
+  authors: "S.-Y. Min, T.-S. Kim, B. J. Kim, J. H. Cho, T.-W. Lee*"
+  title: "Large-scale organic nanowire lithography and electronics"
+  venue: "The 24th International Conference Molecular Electronics & Devices (IC-ME&D), KAIST, Daejeon, Korea, May 15-16, 2013"
+
+- year: 2013
+  scope: international
+  type: Poster
+  authors: "S.-Y. Min, T.-S. Kim, B. J. Kim, H. Cho, Y.-Y. Noh, H. Yang, J. H. Cho, T.-W. Lee*"
+  title: "Large-scale controlled organic nanowire electronics"
+  venue: "The 24th International Conference Molecular Electronics & Devices (IC-ME&D), KAIST, Daejeon, Korea, May 15-16, 2013"
+
+- year: 2013
+  scope: international
+  type: Poster
+  authors: "S.-Y. Min, T.-S. Kim, H. Cho, T.-W. Lee*"
+  title: "E-nanowire printed organic electronics & lithography"
+  venue: "2013 Materials Research Society (MRS) Spring Meeting, Moscone West, San Fransisco, California, USA, April 1-5, 2013"
+
+- year: 2012
+  scope: international
+  type: Oral
+  authors: "T.-S. Kim, S.-Y. Min, T.-W. Lee*"
+  title: "Highly Aligned P3HT Nanofiber Transistors on Self-organized Polymeric Electrodes"
+  venue: "2012 Materials Research Society (MRS) Fall Meeting, Hynes Convention Center, Boston, Massachusetts, USA, November 25-30, 2012"
+
+- year: 2012
+  scope: international
+  type: Poster
+  authors: "H. Cho, S.-H. Jeong, S.-Y. Min, T.-W. Lee*"
+  title: "High-Speed Nozzle Printing of Light-Emitting Organic Nanowires"
+  venue: "The 12th International Meeting on Information Display (IMID 2012), Exco, Daegu, Korea, August 28-31, 2012"
+
+- year: 2012
+  scope: international
+  type: Poster
+  authors: "S.-Y. Min, T.-S. Kim, T.-W. Lee*"
+  title: "Large-Area Light-Emitting Organic Nanowire Printing"
+  venue: "LOPE-C, International Congress Center Munchen, Germany, June 19-21, 2012"
+
+- year: 2012
+  scope: international
+  type: Poster
+  authors: "M. Kim, S.-Y. Min, J. W. Yoo, T.-S. Kim, H. Cho, H. W. Jang, J. H. Je, T.-W. Lee*"
+  title: "Hybrid nanowire array gas sensor"
+  venue: "The International Conference on Electrospinning 2012 (Electrospin 2012), Hyatt Regency Hotel, Jeju, Korea, May 29-June 1, 2012"
+
+- year: 2012
+  scope: international
+  type: Poster
+  authors: "Y. Lee, S.-Y. Min, T.-W. Lee*"
+  title: "Highly Aligned Cu nanowire array printing"
+  venue: "The International Conference on Electrospinning 2012 (Electrospin 2012), Hyatt Regency Hotel, Jeju, Korea, May 29-June 1, 2012"
+
+- year: 2012
+  scope: international
+  type: Poster
+  authors: "H. Cho, S.-Y. Min, T.-S. Kim, T.-W. Lee*"
+  title: "High-Speed Nozzle Printing of Light-Emitting Nanowires"
+  venue: "The International Conference on Electrospinning 2012 (Electrospin 2012), Hyatt Regency Hotel, Jeju, Korea, May 29-June 1, 2012"
+
+- year: 2012
+  scope: international
+  type: Oral
+  authors: "S.-Y. Min, T.-S. Kim, B. J. Kim, J. H. Cho, T.-W. Lee*"
+  title: "E-nozzle printed P3HT:PEO nanowires: Correlation of morphology with field effect mobilities in transistors"
+  venue: "The International Conference on Electrospinning 2012 (Electrospin 2012), Hyatt Regency Hotel, Jeju, Korea, May 29-June 1, 2012"
+
+- year: 2012
+  scope: international
+  type: Invited
+  authors: "S.-Y. Min, T. S. Kim, J. H. Cho, T.-W. Lee*"
+  title: "Large-area organic nanofiber electronics"
+  venue: "The International Conference on Electrospinning 2012 (Electrospin 2012), Hyatt Regency Jeju, Jeju, Korea, May 31, 2012"
+
+- year: 2011
+  scope: international
+  type: Poster
+  authors: "S.-Y. Min, T. S. Kim, B. J. Kim, J. H. Cho, T.-W. Lee*"
+  title: "High Mobility Organic Nanowire Transistor Arrays"
+  venue: "KJF International Conference on Organic Materials for Electronics and Photonics, Hyundai Hotel, Gyeongju, Korea, September 15-18, 2011"
+
+- year: 2011
+  scope: international
+  type: Poster
+  authors: "S.-Y. Min, T. S. Kim, B. J. Kim, J. H. Cho, T.-W. Lee*"
+  title: "Simple fabrication of high mobility transistor arrays using highly aligned printed organic nanowires"
+  venue: "SPIE Optics+Photonics 2011, San Diego Convention Center, San Diego, USA, August 21-25, 2011"
+
+- year: 2011
+  scope: international
+  type: Oral
+  authors: "S.-Y. Min, T. S. Kim, B. J. Kim, J. H. Cho, T.-W. Lee*"
+  title: "Highly-Aligned Printed Organic Nanowires for Large-area Transistor Arrays and Nano-Lithography"
+  venue: "2011 Materials Research Society (MRS) Spring meeting, Moscone center, San Francisco, USA, April 25-29, 2011"
+
+- year: 2010
+  scope: international
+  type: Invited
+  authors: "S.-Y. Min, T.-S. Kim, T.-W. Lee*"
+  title: "Highly Aligned Organic Nanowires and Their Applications"
+  venue: "The 10th International Discussion & Conference on Nano Interface Controlled Electronic Devices (IDC-NICE 2010), HAEVICHI Hotel, Jeju, Korea, October 27-30, 2010"
+
+- year: 2010
+  scope: international
+  type: Poster
+  authors: "S.-Y. Min, T.-W. Lee*"
+  title: "Highly Aligned Patterns of Light-Emitting Poly(9-vinylcarbazole) Electrospun Nanofibers"
+  venue: "IEEE NANO 2010/NANO KOREA 2010, KINTEX, Seoul, Korea August 17-20, 2010"
+
+- year: 2010
+  scope: international
+  type: Invited
+  authors: "S.-Y. Min, T.-W. Lee*"
+  title: "Printing of polymer nanofibers for optical and electronic applications by robotic near-field electrospinning system"
+  venue: "International Union of Materials Research Societies-International Conference on Electronic Materials 2010 (IUMRS-ICEM 2010), KINTEX, Seoul, Korea, August 22-27, 2010"
+
+- year: 2010
+  scope: international
+  type: Poster
+  authors: "S.-Y. Min, J. Bang, J. Park, J.-J. Park, S. Kim, T.-W. Lee*"
+  title: "Realization of White Light by using Blue LED and Electrospun Polymer/Quantum dot Hybrid Fiber"
+  venue: "ME&D 2010, Suncheon National University, Suncheon, Korea, May 19-20, 2010"
+
+- year: 2013
+  scope: domestic
+  type: Invited
+  authors: "M. Kim, Y. H. Kim, H. G. Moon, S.-Y. Min, H. W. Jang and T.-W. Lee*"
+  title: "Large-area gas sensor array based on highly aligned metal oxide nanofibers"
+  venue: "The Korean Ceramic Society Spring Meeting, Changwon, Korea, April 18, 2013"
+
+- year: 2012
+  scope: domestic
+  type: Invited
+  authors: "S.-Y. Min, T. S. Kim, J. H. Cho, T.-W. Lee*"
+  title: "Organic Nanowire Printing, Lithography, and Electronics"
+  venue: "The 19th Korean Conference on Semiconductors, Korea University, Seoul, Korea, February 15-17, 2012"
+
+- year: 2011
+  scope: domestic
+  type: Oral
+  authors: "T.-W. Lee*, S.-Y. Min, T. S. Kim, J. H. Cho"
+  title: "Large Area Organic Nanowire Printing and Transistors"
+  venue: "The Polymer Society of Korea, Kimdaejung Convention Center, Gwangju, Korea, October 6-7, 2011"
+
+- year: 2011
+  scope: domestic
+  type: Oral
+  authors: "T. S. Kim, S.-Y. Min, T.-W. Lee*"
+  title: "Polymer nanofiber transistors using polymeric electrodes with high work function"
+  venue: "The Polymer Society of Korea, Kimdaejung Convention Center, Gwangju, Korea, October 6-7, 2011"
+
+- year: 2011
+  scope: domestic
+  type: Poster
+  authors: "H.-C. Cho, S.-Y. Min, T. S. Kim, T.-W. Lee*"
+  title: "High-Speed Nozzle Printing of Light-Emitting Polymers"
+  venue: "The Polymer Society of Korea, Kimdaejung Convention Center, Gwangju, Korea, October 6-7, 2011"
+
+- year: 2011
+  scope: domestic
+  type: Oral
+  authors: "S.-Y. Min, T. S. Kim, B. J. Kim, J. H. Cho, T.-W. Lee*"
+  title: "Low-voltage Operating Organic Nanowire FET using Polymer Electrolyte Gate Dielectric"
+  venue: "The Polymer Society of Korea, Kimdaejung Convention Center, Gwangju, Korea, October 6-7, 2011"
+
+- year: 2011
+  scope: domestic
+  type: Poster
+  authors: "S.-Y. Min, T. S. Kim, T.-W. Lee*"
+  title: "Highly-aligned printed organic nanowires for high mobility transistor arrays"
+  venue: "The Korean Conference on Semiconductors, Haevichi Hotel, Jeju, Korea, February 16-18, 2011"
+
+- year: 2010
+  scope: domestic
+  type: Invited
+  authors: "S.-Y. Min, T. S. Kim, T.-W. Lee*"
+  title: "High Speed Electrohydrodynamic Nozzle Printing for Large Area Electroncs"
+  venue: "2010 Printed Electronics Korea, KIMMS, Daejeon, Korea, November 11, 2010"
+
+- year: 2010
+  scope: domestic
+  type: Poster
+  authors: "S.-Y. Min, J. Bang, J. Park, C.-L. Lee, S. Lee, J.-J. Park, U. Jeong, S. Kim, T.-W. Lee*"
+  title: "White Light-Emitting Diodes using Electrospun Emitting Fiber Mats of Polymer/Quantum Dot Composites as Down Conversion Phosphor Layers"
+  venue: "The Polymer Society of Korea 2010 Fall, EXCO, Daegu, Korea, October 7-8, 2010"
+
+- year: 2010
+  scope: domestic
+  type: Poster
+  authors: "S.-Y. Min, T.-W. Lee*"
+  title: "Highly aligned patterns of light-emitting poly(9-vinylcarbazole) nanofibers by robotic near-field electrospinning"
+  venue: "The Polymer Society of Korea 2010 Spring, DCC, Daejeon, Korea, April 8-9, 2010"
+

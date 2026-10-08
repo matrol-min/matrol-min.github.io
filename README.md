@@ -27,6 +27,7 @@ main에 푸시하면 GitHub Actions가 건수를 다시 세고 PDF를 새로 만
 | 경력, 학력, 연구 관심 분야, 연구 프로젝트, 기술 역량, 수상 | `cv-data/profile_en.yml`의 `sections:` 아래 |
 | 논문 추가 | `cv-data/publications.yml` 맨 아래에 항목 추가 |
 | 특허 추가, 등록 상태 변경 | `cv-data/patents.yml` |
+| 학술 발표 추가 | `cv-data/presentations.yml` 맨 위(최신순)에 항목 추가 |
 | 화면 문구(섹션 제목, 버튼 글자 등) | `data/labels.en.json` |
 
 ### 논문 항목
@@ -41,6 +42,10 @@ main에 푸시하면 GitHub Actions가 건수를 다시 세고 PDF를 새로 만
 - `status: registered`(등록): `registration_number`, `registration_date`만 있어도 된다(`application_*`는 없어도 읽는 데 문제없음). 화면에는 등록번호가 나온다. 출원번호를 남겨 두고 싶으면 같이 적어도 되지만 화면에는 나오지 않는다.
 - 한쪽 언어의 특허명이 없으면 `""`로 비워 둔다(임의 번역 금지). 국내 특허는 `한글 (영문)`, 국제 특허는 `영문 (한글)`으로 표시되고, 한쪽만 있으면 그것만 표시된다.
 - 영문 페이지에는 `inventors_en`이 표시된다. 본인(`민성용` 또는 `S.-Y. Min`)은 굵게 표시된다.
+
+### 학술 발표 항목
+필드: `year`, `scope`(`international` / `domestic`), `type`(`Invited` / `Oral` / `Poster`), `authors`, `title`, `venue`(학회명, 장소, 일자).
+- 화면에서는 `scope`별로 나뉘고 연도 최신순으로 정렬된다(같은 연도는 파일 순서이므로 최신 발표를 위쪽에 둔다).
 
 ### YAML 주의
 - 필드는 두 칸 들여쓰고, 새 항목은 `- year:`로 시작한다.

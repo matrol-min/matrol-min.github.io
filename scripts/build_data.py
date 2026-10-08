@@ -36,6 +36,7 @@ def bullets(text):
 
 papers_src = load("publications.yml")
 patents_src = load("patents.yml")
+pres_src = load("presentations.yml")
 prof = load("profile_en.yml")
 sections = {s["title"]: s for s in prof["sections"]}
 
@@ -67,6 +68,12 @@ for p in patents_src:
     })
 
 count = lambda xs, k, v: sum(1 for x in xs if x[k] == v)
+presentations = [
+    {"title": x["title"].strip(), "authors": people(x["authors"]), "venue": x["venue"], "year": x["year"],
+     "type": x["type"], "scope": x["scope"]}
+    for x in pres_src
+]
+
 counts = {
     "papers": len(papers),
     "firstAuthor": count(papers, "role", "first"),
@@ -76,6 +83,8 @@ counts = {
     "domPapers": count(papers, "scope", "domestic"),
     "intlPatents": count(patents, "scope", "international"),
     "domPatents": count(patents, "scope", "domestic"),
+    "intlPresentations": count(presentations, "scope", "international"),
+    "domPresentations": count(presentations, "scope", "domestic"),
     "intlRegistered": sum(1 for p in patents if p["scope"] == "international" and p["status"] == "registered"),
     "domRegistered": sum(1 for p in patents if p["scope"] == "domestic" and p["status"] == "registered"),
 }
@@ -104,6 +113,7 @@ data = {
     "awards": [{"k": a["caption"], "v": a["title"], "sub": a.get("sub_title", "")} for a in awards],
     "papers": papers,
     "patents": patents,
+    "presentations": presentations,
 }
 
 out = ROOT / "data" / "cv.json"

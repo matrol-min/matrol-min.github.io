@@ -63,12 +63,19 @@
       return '<div class="t">' + esc(p.title) + '</div><div class="people">' + people(p.inventors, self) +
         '</div><div class="meta"><span class="num">' + esc(p.number) + '</span>' + badge(L.status[p.status], p.status === 'registered') + '</div>';
     };
+    var talk = function (p) {
+      return '<div class="t">' + esc(p.title) + '</div><div class="people">' + people(p.authors, self) +
+        '</div><div class="meta"><span>' + esc(p.venue) + '</span>' + badge(L.type[p.type], p.type === 'Invited') + '</div>';
+    };
     var by = function (list, scope) { return list.filter(function (x) { return x.scope === scope; }); };
 
     var jumps = [
       ['intl-papers', L.intlPapers, C.intlPapers], ['dom-papers', L.domPapers, C.domPapers],
       ['intl-patents', L.intlPatents, C.intlPatents, C.intlRegistered], ['dom-patents', L.domPatents, C.domPatents, C.domRegistered]
     ];
+    var summaryJumps = jumps.concat([
+      ['intl-presentations', L.intlPresentations, C.intlPresentations], ['dom-presentations', L.domPresentations, C.domPresentations]
+    ]);
     var metrics = [[L.mPapers, C.papers], [L.mFirst, C.firstAuthor], [L.mFiled, C.patentsFiled], [L.mRegistered, C.registered]];
 
     var photo = '<img class="photo" src="' + esc(P.photo) + '" alt="' + esc(P.photoAlt) + '" width="144" height="144" decoding="async">';
@@ -83,7 +90,7 @@
         '<div class="metrics">' + metrics.map(function (m) {
           return '<div class="metric"><span>' + esc(m[0]) + '</span><span class="num">' + m[1] + '</span></div>';
         }).join('') + '</div>' +
-        '<ul class="jumps" aria-label="' + esc(L.jump) + '">' + jumps.map(function (j) {
+        '<ul class="jumps" aria-label="' + esc(L.jump) + '">' + summaryJumps.map(function (j) {
           return '<li class="jump"><span class="name">' + esc(j[1]) + '</span><span class="n">' + j[2] + '</span><span class="reg">' +
             (j[3] != null ? '(' + esc(L.registeredN.replace('{n}', j[3])) + ')' : '') + '</span><a href="#' + j[0] + '">' + esc(L.jump) + ' →</a></li>';
         }).join('') + '</ul>') +
@@ -106,7 +113,10 @@
         group('dp', 'dom-papers', L.domPapers, L.papers, by(D.papers, 'domestic'), paper, L) + '</div>') +
       sec('patents', L.patents, '<div class="groups">' +
         group('it', 'intl-patents', L.intlPatents, L.patentsUnit, by(D.patents, 'international'), patent, L) +
-        group('dt', 'dom-patents', L.domPatents, L.patentsUnit, by(D.patents, 'domestic'), patent, L) + '</div>');
+        group('dt', 'dom-patents', L.domPatents, L.patentsUnit, by(D.patents, 'domestic'), patent, L) + '</div>') +
+      sec('presentations', L.presentations, '<div class="groups">' +
+        group('ipr', 'intl-presentations', L.intlPresentations, L.presentationsUnit, by(D.presentations, 'international'), talk, L) +
+        group('dpr', 'dom-presentations', L.domPresentations, L.presentationsUnit, by(D.presentations, 'domestic'), talk, L) + '</div>');
 
     app.innerHTML = html;
     document.title = P.name + ' — Curriculum Vitae';
