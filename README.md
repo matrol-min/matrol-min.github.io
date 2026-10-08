@@ -12,9 +12,8 @@ https://matrol-min.github.io/ (영문 페이지). 데이터(`cv-data/*.yml`)를 
 | `scripts/build_data.py` | yml → `data/cv.json` (건수 자동 집계) |
 | `scripts/make_pdf.sh` | 사이트를 A4 PDF로 인쇄해 `assets/cv.pdf` 생성(Chrome 필요, CI에서도 사용) |
 | `.github/workflows/build.yml` | 푸시 시 데이터·PDF 생성 후 GitHub Pages 배포 |
-| `docs/` | 할 일(`todo.md`), 디자인 프롬프트, 인수인계 문서 |
-| `design/` | Canva 참고 시안, Claude Design 산출물(참고용) |
-| `archive/v1-jekyll-theme/` | 이전 Jekyll 버전(보관용) |
+
+사이트 구동에 필요 없는 파일(`docs/`, `design/`, `archive/`, 원본 사진, 한글 프로필 초안 등)은 로컬에만 두고 저장소에는 올리지 않는다(`.gitignore`).
 
 # 이력 업데이트 방법
 

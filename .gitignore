@@ -31,3 +31,9 @@ archive/
 
 # Design references / Claude Design handoffs: local only
 design/
+
+# Not needed to run the site: kept locally only
+docs/
+cv-data/README.md
+cv-data/SYMin-050.jpeg
+cv-data/profile_ko.yml
