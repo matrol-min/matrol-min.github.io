@@ -59,24 +59,27 @@ main에 푸시하면 GitHub Actions가 건수를 다시 세고 PDF를 새로 만
 
 ## 2. 터미널 명령어 (순서대로)
 
-건수 집계와 PDF 생성은 **푸시하면 GitHub Actions가 자동으로 한다.** 그래서 파일을 고친 뒤 바로 커밋·푸시하면 된다(1~4번만 하면 됨). 화면을 미리 보고 싶을 때만 아래 "미리보기"를 쓴다.
+건수 집계와 PDF 생성은 **푸시하면 GitHub Actions가 자동으로 한다.** 그래서 파일을 고친 뒤 바로 커밋·푸시하면 된다(1~5번만 하면 됨). 화면을 미리 보고 싶을 때만 아래 "미리보기"를 쓴다.
 
 ```bash
 # 1) 프로젝트 폴더로 이동
 cd "/Users/syong/Documents/개인 업무/CV/CV_github"
 
-# 2) 바뀐 내용 확인
+# 2) 원격의 봇 커밋(논문/특허 수정일)을 먼저 받아 온다
+git pull --rebase origin main
+
+# 3) 바뀐 내용 확인
 git status
 git diff --stat
 
-# 3) 커밋
+# 4) 커밋
 git add cv-data
 git commit -m "Update CV: <무엇을 바꿨는지 한 줄>"
 
-# 4) 푸시 -> Actions가 건수 집계, PDF 생성, 사이트 배포를 자동으로 한다
+# 5) 푸시 -> Actions가 건수 집계, PDF 생성, 사이트 배포를 자동으로 한다
 git push origin main
 
-# 5) (선택) 배포 진행 상황 확인
+# 6) (선택) 배포 진행 상황 확인
 gh run list --limit 3
 gh run watch        # 진행 중인 실행을 실시간으로 보기
 ```
@@ -88,6 +91,6 @@ python3 -m http.server 8765          # 브라우저에서 http://localhost:8765/
 scripts/make_pdf.sh                  # (선택) PDF도 로컬에서 만들어 보기 -> assets/cv.pdf (Chrome 필요)
 ```
 
-- 화면 문구나 디자인 파일(`data/labels.en.json`, `assets/`, `index.html`)도 고쳤다면 3번에서 `git add cv-data data assets index.html`처럼 함께 추가한다.
+- 화면 문구나 디자인 파일(`data/labels.en.json`, `assets/`, `index.html`)도 고쳤다면 4번에서 `git add cv-data data assets index.html`처럼 함께 추가한다.
 - 푸시가 거절되면(원격이 앞서 있을 때) `git pull --rebase origin main` 후 다시 `git push origin main`.
 - 푸시 후 사이트가 안 바뀌어 보이면 브라우저 캐시를 비운다(Safari: `Cmd+Option+E` 후 `Cmd+R`).
