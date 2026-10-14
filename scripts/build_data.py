@@ -6,7 +6,8 @@
 - 특허명 표기: 국내 특허는 "한글 (영문)", 국제 특허는 "영문 (한글)". 한쪽만 있으면 그것만 표시.
 - 발명자는 영문 페이지이므로 inventors_en를 그대로 사용한다.
 """
-import json, re, sys
+import hashlib, json, re, sys
+from datetime import date as _date
 from pathlib import Path
 import yaml
 
@@ -39,6 +40,19 @@ patents_src = load("patents.yml")
 pres_src = load("presentations.yml")
 prof = load("profile_en.yml")
 sections = {s["title"]: s for s in prof["sections"]}
+
+# 논문/특허 리스트별 수정일: cv-data/updated.json {papers|patents: {hash, updated}}. 리스트 내용이 바뀌면 오늘 날짜.
+STAMPS = CV / "updated.json"
+stamps = json.loads(STAMPS.read_text(encoding="utf-8")) if STAMPS.exists() else {}
+today = _date.today().isoformat()
+
+
+def stamp(kind, src):
+    h = hashlib.sha1(json.dumps(src, sort_keys=True, ensure_ascii=False, default=str).encode()).hexdigest()[:10]
+    if stamps.get(kind, {}).get("hash") != h:
+        stamps[kind] = {"hash": h, "updated": today}
+    return stamps[kind]["updated"]
+
 
 papers = [
     {
@@ -111,11 +125,19 @@ data = {
     "projects": [{"period": e["caption"], "title": e["title"], "sub": e["sub_title"], "bullets": []} for e in proj],
     "skills": sections["Technical Skills"]["content"],
     "awards": [{"k": a["caption"], "v": a["title"], "sub": a.get("sub_title", "")} for a in awards],
+    "updated": {"papers": stamp("papers", papers_src), "patents": stamp("patents", patents_src)},
     "papers": papers,
     "patents": patents,
     "presentations": presentations,
 }
 
+STAMPS.write_text(json.dumps(stamps, ensure_ascii=False, indent=1, sort_keys=True), encoding="utf-8")
+# README 맨 위 수정일 표시(<!--updated--> 마커 사이)도 같이 갱신
+readme = ROOT / "README.md"
+u = data["updated"]
+readme.write_text(re.sub(r"<!--updated-->.*?<!--/updated-->",
+    f"<!--updated-->논문 업데이트: {u['papers']} · 특허 업데이트: {u['patents']}<!--/updated-->",
+    readme.read_text(encoding="utf-8")), encoding="utf-8")
 out = ROOT / "data" / "cv.json"
 out.parent.mkdir(exist_ok=True)
 out.write_text(json.dumps(data, ensure_ascii=False, indent=1), encoding="utf-8")

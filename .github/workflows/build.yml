@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -30,6 +30,15 @@ jobs:
       # site always matches the YAML data.
       - name: Build data and PDF
         run: scripts/make_pdf.sh
+
+      # Persist the papers/patents update dates (cv-data/updated.json + README top line).
+      # GITHUB_TOKEN pushes don't retrigger workflows, so no loop.
+      - name: Commit update dates
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add cv-data/updated.json README.md
+          git diff --cached --quiet || (git commit -m "Update papers/patents update dates [skip ci]" && git push)
 
       - name: Assemble site
         run: |

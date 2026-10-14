@@ -1,5 +1,7 @@
 # Sung-Yong Min — Academic CV 사이트
 
+<!--updated-->논문 업데이트: 2026-10-14 · 특허 업데이트: 2026-10-14<!--/updated-->
+
 https://matrol-min.github.io/ (영문 페이지). 데이터(`cv-data/*.yml`)를 고치고 푸시하면 사이트와 CV PDF가 자동으로 갱신된다.
 
 ## 폴더 구조
@@ -46,6 +48,9 @@ main에 푸시하면 GitHub Actions가 건수를 다시 세고 PDF를 새로 만
 ### 학술 발표 항목
 필드: `year`, `scope`(`international` / `domestic`), `type`(`Invited` / `Oral` / `Poster`), `authors`, `title`, `venue`(학회명, 장소, 일자).
 - 화면에서는 `scope`별로 나뉘고 연도 최신순으로 정렬된다(같은 연도는 파일 순서이므로 최신 발표를 위쪽에 둔다).
+
+### 수정일 추적 (논문·특허 리스트)
+`cv.json`의 `updated.papers` / `updated.patents`(YYYY-MM-DD)에 각 리스트가 마지막으로 바뀐 날짜가 들어간다. 항목 추가·삭제·수정이 있으면 `build_data.py`를 돌린 날짜로 바뀌고, 기록은 `cv-data/updated.json`에 남는다. 푸시하면 Actions가 `build_data.py`를 돌려 날짜를 갱신하고 `cv-data/updated.json`과 README 맨 위 줄을 자동 커밋한다(`github-actions[bot]`). 그래서 **다음 작업 전에 `git pull --rebase origin main`을 먼저 한다.**
 
 ### YAML 주의
 - 필드는 두 칸 들여쓰고, 새 항목은 `- year:`로 시작한다.
